@@ -1,2 +1,3 @@
 # Cognitive_Robotics
-# Cognitive_Robotics
+
+This project introduces an AI-assisted robotic system, designed for shopping malls, with \textbf{Pepper} at its core acting as a guardian and interactive assistant. Pepper relies on a connected camera and video analytic system for detecting people and recognizing their attributes, such as gender, clothing color, and accessories. However, it does not process this data; instead, it accesses the information from a database. This allows Pepper to interact with visitors through spoken language, enhancing customer experience by serving as an interactive interface to the mall's sophisticated data processing system.
