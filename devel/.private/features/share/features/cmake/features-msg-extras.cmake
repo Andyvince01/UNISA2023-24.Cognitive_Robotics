@@ -1,0 +1,2 @@
+set(features_MESSAGE_FILES "")
+set(features_SERVICE_FILES "/home/andyvince01/Desktop/Project/src/features/srv/AnimationService.srv;/home/andyvince01/Desktop/Project/src/features/srv/ASRService.srv;/home/andyvince01/Desktop/Project/src/features/srv/Rest.srv;/home/andyvince01/Desktop/Project/src/features/srv/TabletService.srv;/home/andyvince01/Desktop/Project/src/features/srv/Text2Speech.srv;/home/andyvince01/Desktop/Project/src/features/srv/VoiceDetectionService.srv;/home/andyvince01/Desktop/Project/src/features/srv/WakeUp.srv")

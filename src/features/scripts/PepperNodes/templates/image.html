@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Titolo della Pagina</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        /* Stile per il video */
+        .video-background {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%; 
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -100; /* Mantiene il video di sfondo */
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <!-- Elemento video per lo sfondo -->
+    <video autoplay loop muted class="video-background">
+        <source src="{{ url_for('static', filename='images/Pepper.mp4') }}" type="video/mp4">
+        Il tuo browser non supporta il tag video.
+    </video>
+
+    <!-- ... il resto del tuo HTML ... -->
+</body>
+</html>

@@ -1,0 +1,1 @@
+/home/andyvince01/Desktop/Project/devel/.private/vision_msgs/share/vision_msgs/cmake/vision_msgsConfig-version.cmake

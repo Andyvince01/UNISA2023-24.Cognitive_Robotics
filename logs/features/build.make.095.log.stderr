@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py", line 57, in <module>
+    spec = load_srv_from_file(msg_context, msg_file, full_type_name)
+  File "/opt/ros/noetic/lib/python3/dist-packages/genmsg/msg_loader.py", line 483, in load_srv_from_file
+    with open(file_path, 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/andyvince01/Desktop/Project/src/features/srv/FaceDetector.srv'
+make[2]: *** [CMakeFiles/_features_generate_messages_check_deps_FaceDetector.dir/build.make:57: CMakeFiles/_features_generate_messages_check_deps_FaceDetector] Error 1
+make[1]: *** [CMakeFiles/Makefile2:634: CMakeFiles/_features_generate_messages_check_deps_FaceDetector.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

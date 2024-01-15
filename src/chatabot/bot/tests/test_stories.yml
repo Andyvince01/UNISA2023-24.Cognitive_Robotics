@@ -1,0 +1,419 @@
+#### This file contains tests to evaluate that your bot behaves as expected.
+#### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
+
+stories:
+- story: 1 - Greet Path
+  steps:
+  - user: |
+      Hello There!
+    intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - user: |
+      What are you capable of?
+    intent: capabilities
+  - action: utter_capabilities
+  - user: |
+      Thank you
+    intent: thanks
+  - action: utter_thanks
+  - user: |
+      Bye!
+    intent: goodbye
+  - action: action_reset
+  - action: utter_goodbye
+
+- story: 2 - Generic Double Count Task
+  steps:
+  - user: |
+      Hello, Pepper!
+    intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - user: |
+      How many people are currently in the mall?
+    intent: count_people
+  - action: action_count_people
+  - action: utter_ask_stopping
+  - user: |
+      and how many of them are [boys]{"entity": "gender", "value": "male"}?
+    intent: count_people
+  - action: action_count_people
+  - action: utter_ask_stopping
+  - user: |
+      Stop!
+    intent: stop
+  - action: action_reset
+  - action: utter_help
+  - user: |
+      Goodbye!
+    intent: goodbye
+  - action: action_reset
+  - action: utter_goodbye
+
+- story: 3 - Form Path -- A test story with a form (Utter_Submit → intent = affirm)
+  steps:
+  - user: |
+      Hi Pepper!
+    intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - user: |
+      I can no longer find my [daughter]{"entity": "gender", "value": "female"}. [She]{"entity": "gender", "value": "female"} is wearing a [pink](color) Peppa Pig [t-shirt]{"entity": "clothing", "value": "top"} and a wool [hat](clothing).
+    intent: finding_someone
+  - action: action_slot_mapping
+  - action: find_person_form
+  - active_loop: find_person_form
+  - user: |
+      I can't remember at the moment, sorry.
+    intent: doubt
+  - action: find_person_form
+  - active_loop: find_person_form
+  - user: |
+      yep
+    intent: affirm
+  - action: find_person_form
+  - active_loop: find_person_form
+  - user: |
+      nope
+    intent: deny
+  - action: find_person_form
+  - active_loop: null
+  - action: utter_submit_find_person_form
+  - user: |
+      Yep
+    intent: affirm
+  - action: action_submit
+  - user: |
+      Thank u, Pepper!
+    intent: thanks
+  - action: utter_thanks
+  - user: |
+      Bye-bye, Pepper!
+    intent: goodbye
+  - action: action_reset  
+  - action: utter_goodbye
+
+- story: 4 - Form Path -- A test story with a form (Utter_Submit → intent = inform)
+  steps:
+  - user: |
+      Hi Pepper!
+    intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - user: |
+      I can no longer find my friend. [He]{"entity": "gender", "value": "male"} is wearing a [hat](clothing), [blue](color) [leggings]{"entity": "clothing", "value": "trouser"} and a [white](color) [vest]{"entity": "clothing", "value": "top"} but [not](negation) a [rucksack]{"entity": "clothing", "value": "bag"}.
+    intent: finding_someone
+  - action: action_slot_mapping
+  - action: find_person_form
+  - active_loop: null
+  - action: utter_submit_find_person_form
+  - user: |
+      Sorry. I made a mistake. [He]{"entity": "gender", "value": "male"} is wearing [black](color) [leggings]{"entity": "clothing", "value": "trouser"}, [not](negation) [blue](color) ones.
+    intent: inform
+  - action: action_slot_mapping
+  - action: find_person_form
+  - active_loop: null
+  - action: utter_submit_find_person_form
+  - user: |
+      Yep!
+    intent: affirm
+  - action: action_submit
+  - user: |
+      Thanks for the information!
+    intent: thanks
+  - action: utter_thanks
+
+- story: 5 - Form Path -- A test story with a form (Find_person_form → stop = reset)
+  steps:
+  - user: |
+      Hello Peppa!
+    intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - user: |
+      I can no longer find my [grandma]{"entity": "gender", "value": "female"}. Are you able to find [her]{"entity": "gender", "value": "female"}?
+    intent: finding_someone
+  - action: action_slot_mapping
+  - action: find_person_form
+  - active_loop: find_person_form
+  - user: |
+      [purple](color)
+    intent: inform
+  - action: find_person_form
+  - active_loop: find_person_form
+  - user: |
+      I can't remember at the moment. Excuse me.
+    intent: doubt
+  - action: find_person_form
+  - active_loop: find_person_form
+  - user: |
+      Don't worry. I found her. She just called me.
+    intent: stop
+  - action: action_reset
+  - action: utter_help
+  - action: action_deactivate_loop
+  - active_loop: null
+
+- story: 6 - Form Path -- A test story with a form (Utter_Submit → stop = reset)
+  steps:
+  - user: |
+      I can no longer find my [son]{"entity": "gender", "value": "male"}. [He]{"entity": "gender", "value": "male"} wears a [purple](color) [hoodie]{"entity": "clothing", "value": "top"} and [green](color) [jeans]{"entity": "clothing", "value": "trouser"} but [doesn't](negation) wear a [beret]{"entity": "clothing", "value": "hat"}.
+    intent: finding_someone
+  - action: action_slot_mapping
+  - action: find_person_form
+  - active_loop: find_person_form
+  - user: |
+      Yeah
+    intent: affirm
+  - action: find_person_form
+  - active_loop: null
+  - action: utter_submit_find_person_form
+  - user: |
+      You can stop the form.
+    intent: stop
+  - action: action_reset
+  - action: utter_help
+  - user: |
+      Bye.
+    intent: goodbye
+  - action: action_reset
+  - action: utter_goodbye
+
+- story: 7 - Form Path -- A test story with unexpected input during a form
+  steps:
+  - user: |
+      Hi Pepper!
+    intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - user: |
+      I can no longer find my cousin. [She]{"entity": "gender", "value": "female"} is wearing a [blue](color) [sweater]{"entity": "clothing", "value": "top"} but [neither](negation) a [hat](clothing) [nor](negation) a [purse]{"entity": "clothing", "value": "bag"}.
+    intent: finding_someone
+  - action: action_slot_mapping
+  - action: find_person_form
+  - active_loop: find_person_form
+  - user: |
+      How many people have walked past the [supermarket](place) for [eight seconds](duration) but [not](negation) for [sixty-one times](passages)?
+    intent: count_people
+  - action: action_reset
+  - action: action_deactivate_loop
+  - active_loop: null
+  - action: action_count_people
+  - action: utter_ask_stopping
+  - user: |
+      Stop!
+    intent: stop
+  - action: action_reset
+  - action: utter_help
+  - user: |
+      Thanks for all!
+    intent: thanks
+  - action: utter_thanks
+
+- story: 8 - Several Counting Request with Negation Recognition
+  steps:
+  - user: |
+      Hello!
+    intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - user: |
+      Can u tell me how many people of [male](gender) gender have walked past the [bar](place) for [twenty-eight times](passages) and how many of them [don't](negation) wear a [visor]{"entity": "clothing", "value": "hat"}? 
+    intent: count_people
+  - action: action_count_people
+  - action: utter_ask_stopping
+  - user: |
+      Stop.
+    intent: stop
+  - action: action_reset
+  - action: utter_help
+  - user: |
+      How many people [don't](negation) wear a [red](color) [dress]{"entity": "clothing", "value": "top"}?
+    intent: count_people
+  - action: action_count_people
+  - action: utter_ask_stopping 
+  - user: | 
+      and how many of them [don't](negation) carry a [bag](clothing)?
+    intent: count_people
+  - action: action_count_people
+  - action: utter_ask_stopping
+  - user: | 
+      You can stop.
+    intent: stop
+  - action: action_reset
+  - action: utter_help
+
+- story: 9 - Gender Recognition (Count People Intent)
+  steps:
+  - user: |
+      Hello!
+    intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - user: |
+      How many [male](gender) people are currently in the mall? 
+    intent: count_people
+  - action: action_count_people
+  - action: utter_ask_stopping
+  - user: |
+      Stop.
+    intent: stop
+  - action: action_reset
+  - action: utter_help
+  - user: |
+      How many people [female](gender) people are there instead? 
+    intent: count_people
+  - action: action_count_people
+  - action: utter_ask_stopping 
+  - user: | 
+      Bye, Pepper!
+    intent: goodbye
+  - action: action_reset
+  - action: utter_goodbye
+
+- story: 10 - Color Recognition (Count People Intent)
+  steps:
+  - user: |
+      Hello!
+    intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - user: |
+      How many guys wear a [red](color) [shirt]{"entity": "clothing", "value": "top"}? 
+    intent: count_people
+  - action: action_count_people
+  - action: utter_ask_stopping
+  - user: |
+      and how many of them [aren't](negation) wearing [orange](color) [leggings]{"entity": "clothing", "value": "trouser"}?
+    intent: count_people
+  - action: action_count_people
+  - action: utter_ask_stopping
+  - user: | 
+      Bye, stupid robot!
+    intent: goodbye
+  - action: action_reset
+  - action: utter_goodbye
+
+- story: 11 - Attributes Recognition (Count People Intent)
+  steps:
+  - user: |
+      Hello!
+    intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - user: |
+      How many people wear a [hat](clothing) but [not](negation) a [purse]{"entity": "clothing", "value": "bag"}? 
+    intent: count_people
+  - action: action_count_people
+  - action: utter_ask_stopping
+  - user: |
+      Instead, how many are the people that [don't](negation) carry a [bag](clothing) but are wearing a [beret]{"entity": "clothing", "value": "hat"}? 
+    intent: count_people
+  - action: action_count_people
+  - action: utter_ask_stopping
+  - user: | 
+      Stop.
+    intent: stop
+  - action: action_reset
+  - action: utter_help
+
+- story: 12 - All Attributes Recognition (Count People Intent)
+  steps:
+  - user: |
+      Hello!
+    intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - user: |
+      Could you tell me the number of people who are currently wearing a [black](color) [shirt]{"entity": "clothing", "value": "top"}, [brown](color) [pants]{"entity": "clothing", "value": "trouser"}, but [neither](negation) a [hat](clothing) [nor](negation) a [bag](clothing)?
+    intent: count_people
+  - action: action_count_people
+  - action: utter_ask_stopping
+  - user: |
+      Instead, how many of them are also carrying a [bag](clothing)?
+    intent: count_people
+  - action: action_count_people
+  - action: utter_ask_stopping
+  - user: | 
+      Stop.
+    intent: stop
+  - action: action_reset
+  - action: utter_help
+  - user: | 
+      See you later, robot!
+    intent: goodbye
+  - action: action_reset
+  - action: utter_goodbye
+
+- story: 13 - Fallback Intent
+  steps:
+  - user: |
+      Hello!
+    intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - user: |
+      Do you know when this shopping mall was built?  
+    intent: nlu_fallback
+  - action: utter_please_rephrase
+  - user: |
+      Okay. Thanks anyway.
+    intent: thanks
+  - action: utter_thanks
+
+- story: 14 - Fallback Intent during count
+  steps:
+  - user: |
+      Hello!
+    intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - user: |
+      Can you determine the number of people wearing a [blue](color) [t-shirt]{"entity": "clothing", "value": "top"}?
+    intent: count_people
+  - action: action_count_people
+  - action: utter_ask_stopping
+  - user: |
+      Do you know when the sun will set today?
+    intent: nlu_fallback
+  - action: utter_please_rephrase
+  - user: |
+      and how many of them are [female](gender)?
+    intent: count_people
+  - action: action_count_people
+  - action: utter_ask_stopping
+  - user: |
+      Bye.
+    intent: goodbye
+  - action: action_reset
+  - action: utter_goodbye      
+
+- story: 15 - Fallback Intent during form
+  steps:
+  - user: |
+      I can no longer find my [mama]{"entity": "gender", "value": "female"}. [She]{"entity": "gender", "value": "female"} is wearing a [brown](color) [vest]{"entity": "clothing", "value": "top"}, [blue](color) [jeans]{"entity": "clothing", "value": "trouser"} but [not](negation) a [hat](clothing).
+    intent: finding_someone
+  - action: action_slot_mapping
+  - action: find_person_form
+  - active_loop: find_person_form
+  - user: |
+      Do you know if there are restaurants in the shopping mall?
+    intent: nlu_fallback
+  - action: utter_please_rephrase
+  - action: find_person_form
+  - active_loop: find_person_form
+  - user: |
+      Yes.
+    intent: affirm
+  - action: find_person_form
+  - active_loop: null
+  - action: utter_submit_find_person_form
+  - user: |
+      Yes. I wanna submit it.
+    intent: affirm
+  - action: action_submit
+  - user: |
+      Thanks for the information!
+    intent: thanks
+  - action: utter_thanks

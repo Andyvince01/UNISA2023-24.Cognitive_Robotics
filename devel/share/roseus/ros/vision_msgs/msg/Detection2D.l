@@ -1,0 +1,1 @@
+/home/andyvince01/Desktop/Project/devel/.private/vision_msgs/share/roseus/ros/vision_msgs/msg/Detection2D.l

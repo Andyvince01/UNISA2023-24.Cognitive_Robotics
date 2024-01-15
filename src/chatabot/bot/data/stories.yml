@@ -1,0 +1,955 @@
+version: "3.1"
+
+stories:
+
+# The story begins with a greeting and an offer of help. The user expresses the intent to count people, specifying characteristics like gender, color, and 
+# clothing type. The system processes these inputs, updates relevant variables (slots), and then asks if the user wants to stop. The user decides to stop,
+# resets the system, and says goodbye.
+- story: 1 - Counting People by Attributes
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - intent: count_people
+    entities:
+    - gender: male
+    - color: white
+    - clothing: top
+  - action: action_count_people
+  - slot_was_set:
+    - gender: male
+  - slot_was_set:
+    - bag: null
+  - slot_was_set:
+    - hat: null
+  - slot_was_set:
+    - upper_color:
+      - white
+      - true
+  - slot_was_set:
+    - lower_color: null
+  - slot_was_set:
+    - roi1_passages: null
+  - slot_was_set:
+    - roi1_persistence_time: null
+  - slot_was_set:
+    - roi2_passages: null
+  - slot_was_set:
+    - roi2_persistence_time: null
+  - action: utter_ask_stopping
+  - intent: stop
+  - action: action_reset
+  - action: utter_help
+  - intent: goodbye
+  - action: action_reset
+  - action: utter_goodbye
+
+# Here, the user greets and then expresses a desire to find someone with specific attributes. The system maps these attributes (gender, clothing color, etc.)
+# and initiates a loop for person searching. Before submitting the form, the user provides additional details, like the color of the trousers. After several
+# interactions to refine the search, the user confirms the details, and the system submits the final request.
+- story: 2 - Finding Someone by Detailed Attributes
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - intent: finding_someone
+    entities:
+    - gender: male
+    - gender: male
+    - color: white
+    - clothing: top
+    - clothing: bag
+  - action: action_slot_mapping
+  - slot_was_set:
+    - gender: male
+  - slot_was_set:
+    - upper_color: white
+  - slot_was_set:
+    - lower_color: null
+  - slot_was_set:
+    - bag: true
+  - slot_was_set:
+    - hat: null
+  - slot_was_set:
+    - roi1_passages: null
+  - slot_was_set:
+    - roi1_persistence_time: null
+  - slot_was_set:
+    - roi2_passages: null
+  - slot_was_set:
+    - roi2_persistence_time: null
+  - slot_was_set:
+    - requested_slot: null
+  - slot_was_set:
+    - session_started_metadata: null
+  - action: find_person_form
+  - active_loop: find_person_form
+  - slot_was_set:
+    - gender: male
+  - slot_was_set:
+    - upper_color: white
+  - slot_was_set:
+    - bag: true
+  - slot_was_set:
+    - requested_slot: lower_color
+  - intent: inform
+    entities:
+    - color: gray
+  - slot_was_set:
+    - lower_color: gray
+  - action: find_person_form
+  - slot_was_set:
+    - lower_color: gray
+  - slot_was_set:
+    - requested_slot: hat
+  - intent: doubt
+  - slot_was_set:
+    - hat: None
+  - action: find_person_form
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit_find_person_form
+  - intent: inform
+    entities:
+    - gender: male
+    - negation: not
+    - clothing: hat
+    - gender: male
+    - color: white
+    - clothing: trouser
+  - action: action_slot_mapping
+  - slot_was_set:
+    - gender: male
+  - slot_was_set:
+    - upper_color: white
+  - slot_was_set:
+    - lower_color: white
+  - slot_was_set:
+    - bag: true
+  - slot_was_set:
+    - hat: false
+  - slot_was_set:
+    - roi1_passages: null
+  - slot_was_set:
+    - roi1_persistence_time: null
+  - slot_was_set:
+    - roi2_passages: null
+  - slot_was_set:
+    - roi2_persistence_time: null
+  - slot_was_set:
+    - requested_slot: null
+  - slot_was_set:
+    - session_started_metadata: null
+  - action: find_person_form
+  - active_loop: find_person_form
+  - slot_was_set:
+    - gender: male
+  - slot_was_set:
+    - upper_color: white
+  - slot_was_set:
+    - lower_color: white
+  - slot_was_set:
+    - bag: true
+  - slot_was_set:
+    - hat: false
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit_find_person_form
+  - intent: affirm
+  - action: action_submit
+  - intent: thanks
+  - action: utter_thanks
+  - intent: goodbye
+  - action: action_reset
+  - action: utter_goodbye
+
+# The user starts by looking for a person based on specific features (female gender, purple upper clothing color). The system proceeds with slot
+# mapping and initiates the person search module. After various interactions to define further details like the presence of a bag or a hat, the 
+# user confirms, and the system submits the request.
+- story: 3 - Identifying a Person by Specific Features
+  steps:
+  - intent: finding_someone
+    entities:
+    - gender: female
+    - color: purple
+    - clothing: top
+  - action: action_slot_mapping
+  - slot_was_set:
+    - gender: female
+  - slot_was_set:
+    - upper_color: purple
+  - slot_was_set:
+    - lower_color: null
+  - slot_was_set:
+    - bag: null
+  - slot_was_set:
+    - hat: null
+  - slot_was_set:
+    - roi1_passages: null
+  - slot_was_set:
+    - roi1_persistence_time: null
+  - slot_was_set:
+    - roi2_passages: null
+  - slot_was_set:
+    - roi2_persistence_time: null
+  - slot_was_set:
+    - requested_slot: null
+  - slot_was_set:
+    - session_started_metadata: null
+  - action: find_person_form
+  - active_loop: find_person_form
+  - slot_was_set:
+    - gender: female
+  - slot_was_set:
+    - upper_color: purple
+  - slot_was_set:
+    - requested_slot: lower_color
+  - intent: doubt
+  - slot_was_set:
+    - lower_color: None
+  - action: find_person_form
+  - slot_was_set:
+    - lower_color: None
+  - slot_was_set:
+    - requested_slot: bag
+  - intent: affirm
+  - slot_was_set:
+    - bag: true
+  - action: find_person_form
+  - slot_was_set:
+    - bag: true
+  - slot_was_set:
+    - requested_slot: hat
+  - intent: deny
+  - slot_was_set:
+    - hat: false
+  - action: find_person_form
+  - slot_was_set:
+    - hat: false
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit_find_person_form
+  - intent: affirm
+  - action: action_submit
+
+# The user greets and then searches for a specific person but abruptly interrupts the search. The system resets all information and ends the active loop.
+# After an additional offer of help, the user says goodbye.
+- story: 4 - Searching for a Person, Interrupted
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - intent: finding_someone
+    entities:
+    - gender: male
+    - gender: male
+    - color: white
+    - clothing: trouser
+    - color: orange
+    - clothing: top
+  - slot_was_set:
+    - gender: male
+  - action: action_slot_mapping
+  - slot_was_set:
+    - lower_color: white
+  - slot_was_set:
+    - upper_color: orange
+  - action: find_person_form
+  - active_loop: find_person_form
+  - slot_was_set:
+    - gender: male
+  - slot_was_set:
+    - upper_color: orange
+  - slot_was_set:
+    - lower_color: white
+  - slot_was_set:
+    - requested_slot: bag
+  - intent: stop
+  - action: action_reset
+  - action: utter_help
+  - action: action_deactivate_loop
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - intent: goodbye
+  - action: action_reset
+  - action: utter_goodbye
+
+# After greeting, the user begins searching for a person but then decides to stop. The system resets the information and ends the loop. 
+# The user thanks and says goodbye.
+- story: 5 - Beginning a Person Search, then Halting
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - intent: finding_someone
+    entities:
+    - gender: male
+    - gender: male
+    - clothing: hat
+  - action: action_slot_mapping
+  - slot_was_set:
+    - gender: male
+  - slot_was_set:
+    - upper_color: null
+  - slot_was_set:
+    - lower_color: null
+  - slot_was_set:
+    - bag: null
+  - slot_was_set:
+    - hat: true
+  - slot_was_set:
+    - roi1_passages: null
+  - slot_was_set:
+    - roi1_persistence_time: null
+  - slot_was_set:
+    - roi2_passages: null
+  - slot_was_set:
+    - roi2_persistence_time: null
+  - slot_was_set:
+    - requested_slot: null
+  - slot_was_set:
+    - session_started_metadata: null
+  - action: find_person_form
+  - active_loop: find_person_form
+  - slot_was_set:
+    - gender: male
+  - slot_was_set:
+    - hat: true
+  - slot_was_set:
+    - requested_slot: upper_color
+  - intent: inform
+    entities:
+    - gender: male
+    - color: black
+    - clothing: top
+  - slot_was_set:
+    - upper_color: black
+  - action: find_person_form
+  - slot_was_set:
+    - upper_color: black
+  - slot_was_set:
+    - requested_slot: lower_color
+  - intent: stop
+    entities:
+    - gender: male
+  - action: action_reset
+  - action: utter_help
+  - action: action_deactivate_loop
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - intent: thanks
+  - action: utter_thanks
+  - intent: goodbye
+  - action: action_reset
+  - action: utter_goodbye
+
+# In this interactive story, the user does not express a clear intent initially. The system still begins setting slots based on generic attributes. 
+# After a few interactions, the user decides to stop, and the system resets and concludes with a goodbye.
+- story: 6 - Flexible Person Search
+  steps:
+  - slot_was_set:
+    - gender: female
+  - slot_was_set:
+    - upper_color: blue
+  - slot_was_set:
+    - lower_color: null
+  - slot_was_set:
+    - bag: false
+  - slot_was_set:
+    - hat: true
+  - slot_was_set:
+    - roi1_passages: null
+  - slot_was_set:
+    - roi1_persistence_time: null
+  - slot_was_set:
+    - roi2_passages: null
+  - slot_was_set:
+    - roi2_persistence_time: null
+  - slot_was_set:
+    - requested_slot: null
+  - slot_was_set:
+    - session_started_metadata: null
+  - slot_was_set:
+    - gender: female
+  - slot_was_set:
+    - upper_color: blue
+  - slot_was_set:
+    - bag: false
+  - slot_was_set:
+    - hat: true
+  - slot_was_set:
+    - requested_slot: lower_color
+  - slot_was_set:
+    - requested_slot: null
+  - slot_was_set:
+    - gender: null
+  - slot_was_set:
+    - bag: null
+  - slot_was_set:
+    - hat: null
+  - slot_was_set:
+    - upper_color: null
+  - slot_was_set:
+    - lower_color: null
+  - slot_was_set:
+    - roi1_passages: null
+  - slot_was_set:
+    - roi1_persistence_time: null
+  - slot_was_set:
+    - roi2_passages: null
+  - slot_was_set:
+    - roi2_persistence_time: null
+  - intent: stop
+  - action: action_reset
+  - action: utter_help
+  - intent: goodbye
+  - action: action_reset
+  - action: utter_goodbye
+
+# The user intends to count people in a supermarket, specifying some attributes. The system updates the slots accordingly. After more interactions to
+# refine the request, the user stops, and the system resets and offers help before concluding.
+- story: 7 - Dynamic Crowd Analysis
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - intent: count_people
+    entities:
+    - color: blue
+    - clothing: top
+    - negation: not
+    - place: supermarket
+    - duration: 2 seconds
+    - passages: 4 times
+  - action: action_count_people
+  - slot_was_set:
+    - gender: null
+  - slot_was_set:
+    - bag: null
+  - slot_was_set:
+    - hat: null
+  - slot_was_set:
+    - upper_color:
+      - blue
+      - true
+  - slot_was_set:
+    - lower_color: null
+  - slot_was_set:
+    - roi1_passages:
+      - 4
+      - true
+  - slot_was_set:
+    - roi1_persistence_time:
+      - 2
+      - false
+  - slot_was_set:
+    - roi2_passages: null
+  - slot_was_set:
+    - roi2_persistence_time: null
+  - action: utter_ask_stopping
+  - intent: count_people
+    entities:
+    - clothing: hat
+  - action: action_count_people
+  - slot_was_set:
+    - gender: null
+  - slot_was_set:
+    - bag: null
+  - slot_was_set:
+    - hat: true
+  - slot_was_set:
+    - upper_color:
+      - blue
+      - true
+  - slot_was_set:
+    - lower_color: null
+  - slot_was_set:
+    - roi1_passages:
+      - 4
+      - true
+  - slot_was_set:
+    - roi1_persistence_time:
+      - 2
+      - false
+  - slot_was_set:
+    - roi2_passages: null
+  - slot_was_set:
+    - roi2_persistence_time: null
+  - action: utter_ask_stopping
+  - intent: stop
+  - action: action_reset
+  - action: utter_help
+  - intent: goodbye
+  - action: action_reset
+  - action: utter_goodbye
+
+# The user begins by counting people but then switches to searching for a specific person, providing details like gender and clothing color. 
+# The system transitions from a generic count to a detailed people search. After various adjustments and confirmations, the system finalizes the request.
+- story: 8 - Advanced Person Identification
+  steps:
+  - intent: count_people
+    entities:
+    - clothing: bag
+    - negation: neither
+    - color: white
+    - clothing: top
+    - negation: nor
+    - clothing: hat
+  - action: action_count_people
+  - slot_was_set:
+    - gender: null
+  - slot_was_set:
+    - bag: true
+  - slot_was_set:
+    - hat: false
+  - slot_was_set:
+    - upper_color:
+      - white
+      - false
+  - slot_was_set:
+    - lower_color: null
+  - slot_was_set:
+    - roi1_passages: null
+  - slot_was_set:
+    - roi1_persistence_time: null
+  - slot_was_set:
+    - roi2_passages: null
+  - slot_was_set:
+    - roi2_persistence_time: null
+  - action: utter_ask_stopping
+  - intent: count_people
+    entities:
+    - color: white
+    - clothing: top
+  - action: action_count_people
+  - slot_was_set:
+    - gender: null
+  - slot_was_set:
+    - bag: true
+  - slot_was_set:
+    - hat: false
+  - slot_was_set:
+    - upper_color:
+      - white
+      - true
+  - slot_was_set:
+    - lower_color: null
+  - slot_was_set:
+    - roi1_passages: null
+  - slot_was_set:
+    - roi1_persistence_time: null
+  - slot_was_set:
+    - roi2_passages: null
+  - slot_was_set:
+    - roi2_persistence_time: null
+  - action: utter_ask_stopping
+  - intent: finding_someone
+  - action: action_slot_mapping
+  - slot_was_set:
+    - gender: null
+  - slot_was_set:
+    - upper_color: null
+  - slot_was_set:
+    - lower_color: null
+  - slot_was_set:
+    - bag: null
+  - slot_was_set:
+    - hat: null
+  - slot_was_set:
+    - roi1_passages: null
+  - slot_was_set:
+    - roi1_persistence_time: null
+  - slot_was_set:
+    - roi2_passages: null
+  - slot_was_set:
+    - roi2_persistence_time: null
+  - slot_was_set:
+    - requested_slot: null
+  - slot_was_set:
+    - session_started_metadata: null
+  - action: find_person_form
+  - active_loop: find_person_form
+  - slot_was_set:
+    - gender: null
+  - slot_was_set:
+    - upper_color: null
+  - slot_was_set:
+    - lower_color: null
+  - slot_was_set:
+    - bag: null
+  - slot_was_set:
+    - hat: null
+  - slot_was_set:
+    - requested_slot: gender
+  - intent: inform
+    entities:
+    - gender: female
+  - slot_was_set:
+    - gender: female
+  - action: find_person_form
+  - slot_was_set:
+    - gender: female
+  - slot_was_set:
+    - requested_slot: upper_color
+  - intent: inform
+    entities:
+    - gender: female
+    - color: white
+    - clothing: top
+  - slot_was_set:
+    - upper_color: white
+  - action: find_person_form
+  - slot_was_set:
+    - upper_color: white
+  - slot_was_set:
+    - requested_slot: lower_color
+  - intent: inform
+    entities:
+    - gender: female
+    - color: blue
+    - clothing: trouser
+  - slot_was_set:
+    - lower_color: blue
+  - action: find_person_form
+  - slot_was_set:
+    - lower_color: blue
+  - slot_was_set:
+    - requested_slot: bag
+  - intent: doubt
+  - slot_was_set:
+    - bag: None
+  - action: find_person_form
+  - slot_was_set:
+    - bag: None
+  - slot_was_set:
+    - requested_slot: hat
+  - intent: deny
+  - slot_was_set:
+    - hat: false
+  - action: find_person_form
+  - slot_was_set:
+    - hat: false
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit_find_person_form
+  - intent: inform
+    entities:
+    - gender: female
+    - color: black
+    - clothing: trouser
+  - action: action_slot_mapping
+  - slot_was_set:
+    - gender: female
+  - slot_was_set:
+    - upper_color: white
+  - slot_was_set:
+    - lower_color: black
+  - slot_was_set:
+    - bag: None
+  - slot_was_set:
+    - hat: false
+  - slot_was_set:
+    - roi1_passages: null
+  - slot_was_set:
+    - roi1_persistence_time: null
+  - slot_was_set:
+    - roi2_passages: null
+  - slot_was_set:
+    - roi2_persistence_time: null
+  - slot_was_set:
+    - requested_slot: null
+  - slot_was_set:
+    - session_started_metadata: null
+  - action: find_person_form
+  - active_loop: find_person_form
+  - slot_was_set:
+    - gender: female
+  - slot_was_set:
+    - upper_color: white
+  - slot_was_set:
+    - lower_color: black
+  - slot_was_set:
+    - bag: null
+  - slot_was_set:
+    - hat: false
+  - slot_was_set:
+    - requested_slot: bag
+  - intent: doubt
+  - slot_was_set:
+    - bag: None
+  - action: find_person_form
+  - slot_was_set:
+    - bag: None
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit_find_person_form
+  - intent: affirm
+  - action: action_submit
+
+# In the story "9 - Several Counting Requests," the sequence starts with a greeting and an offer of help. The user then makes multiple requests to count people,
+# each time specifying different attributes and using negations. 
+- story: 9 - Several Counting Requests
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - intent: count_people
+    entities:
+    - negation: don't
+    - color: black
+    - clothing: trouser
+  - action: action_count_people
+  - slot_was_set:
+    - gender: null
+  - slot_was_set:
+    - bag: null
+  - slot_was_set:
+    - hat: null
+  - slot_was_set:
+    - upper_color: null
+  - slot_was_set:
+    - lower_color:
+      - black
+      - false
+  - slot_was_set:
+    - roi1_passages: null
+  - slot_was_set:
+    - roi1_persistence_time: null
+  - slot_was_set:
+    - roi2_passages: null
+  - slot_was_set:
+    - roi2_persistence_time: null
+  - action: utter_ask_stopping
+  - intent: count_people
+    entities:
+    - negation: don't
+    - color: yellow
+    - clothing: top
+  - action: action_count_people
+  - slot_was_set:
+    - gender: null
+  - slot_was_set:
+    - bag: null
+  - slot_was_set:
+    - hat: null
+  - slot_was_set:
+    - upper_color:
+      - yellow
+      - false
+  - slot_was_set:
+    - lower_color:
+      - black
+      - false
+  - slot_was_set:
+    - roi1_passages: null
+  - slot_was_set:
+    - roi1_persistence_time: null
+  - slot_was_set:
+    - roi2_passages: null
+  - slot_was_set:
+    - roi2_persistence_time: null
+  - action: utter_ask_stopping
+  - intent: count_people
+    entities:
+    - negation: don't
+    - color: white
+    - clothing: top
+  - action: action_count_people
+  - slot_was_set:
+    - gender: null
+  - slot_was_set:
+    - bag: null
+  - slot_was_set:
+    - hat: null
+  - slot_was_set:
+    - upper_color:
+      - white
+      - false
+  - slot_was_set:
+    - lower_color:
+      - black
+      - false
+  - slot_was_set:
+    - roi1_passages: null
+  - slot_was_set:
+    - roi1_persistence_time: null
+  - slot_was_set:
+    - roi2_passages: null
+  - slot_was_set:
+    - roi2_persistence_time: null
+  - action: utter_ask_stopping
+  - intent: count_people
+    entities:
+    - gender: female
+    - negation: don't
+    - clothing: hat
+  - action: action_count_people
+  - slot_was_set:
+    - gender: female
+  - slot_was_set:
+    - bag: null
+  - slot_was_set:
+    - hat: false
+  - slot_was_set:
+    - upper_color:
+      - white
+      - false
+  - slot_was_set:
+    - lower_color:
+      - black
+      - false
+  - slot_was_set:
+    - roi1_passages: null
+  - slot_was_set:
+    - roi1_persistence_time: null
+  - slot_was_set:
+    - roi2_passages: null
+  - slot_was_set:
+    - roi2_persistence_time: null
+  - action: utter_ask_stopping
+  - intent: stop
+  - action: action_reset
+  - action: utter_help
+  - intent: goodbye
+  - action: action_reset
+  - action: utter_goodbye
+
+- story: 10 - Submit Form with a Thanks Intent 
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - intent: finding_someone
+    entities:
+    - color: purple
+    - clothing: top
+    - negation: not
+    - clothing: bag
+  - action: action_slot_mapping
+  - slot_was_set:
+    - gender: null
+  - slot_was_set:
+    - upper_color: purple
+  - slot_was_set:
+    - lower_color: null
+  - slot_was_set:
+    - bag: false
+  - slot_was_set:
+    - hat: null
+  - slot_was_set:
+    - roi1_passages: null
+  - slot_was_set:
+    - roi1_persistence_time: null
+  - slot_was_set:
+    - roi2_passages: null
+  - slot_was_set:
+    - roi2_persistence_time: null
+  - slot_was_set:
+    - requested_slot: null
+  - slot_was_set:
+    - session_started_metadata: null
+  - action: find_person_form
+  - active_loop: find_person_form
+  - slot_was_set:
+    - upper_color: purple
+  - slot_was_set:
+    - bag: false
+  - slot_was_set:
+    - requested_slot: gender
+  - intent: doubt
+  - slot_was_set:
+    - gender: None
+  - action: find_person_form
+  - slot_was_set:
+    - gender: null
+  - slot_was_set:
+    - requested_slot: gender
+  - intent: inform
+    entities:
+    - gender: male
+  - slot_was_set:
+    - gender: male
+  - action: find_person_form
+  - slot_was_set:
+    - gender: male
+  - slot_was_set:
+    - requested_slot: lower_color
+  - intent: doubt
+  - slot_was_set:
+    - lower_color: None
+  - action: find_person_form
+  - slot_was_set:
+    - lower_color: None
+  - slot_was_set:
+    - requested_slot: hat
+  - intent: deny
+  - slot_was_set:
+    - hat: false
+  - action: find_person_form
+  - slot_was_set:
+    - hat: false
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit_find_person_form
+  - intent: thanks
+  - action: action_submit
+  - intent: thanks
+  - action: utter_thanks
+  - intent: goodbye
+  - action: action_reset
+  - action: utter_goodbye
+
+- story: Fallback sentences followed by a counting request
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_help
+  - intent: nlu_fallback
+    entities:
+    - color: red
+    - clothing: top
+  - action: utter_please_rephrase
+  - intent: nlu_fallback
+  - action: utter_please_rephrase
+  - intent: count_people
+    entities:
+    - negation: not
+    - color: red
+    - clothing: top
+    - place: supermarket
+    - passages: fifty-five times
+  - action: action_count_people
+  - slot_was_set:
+    - gender: null
+  - slot_was_set:
+    - bag: null
+  - slot_was_set:
+    - hat: null
+  - slot_was_set:
+    - upper_color:
+      - red
+      - false
+  - slot_was_set:
+    - lower_color: null
+  - slot_was_set:
+    - roi1_passages:
+      - 55
+      - true
+  - slot_was_set:
+    - roi1_persistence_time: null
+  - slot_was_set:
+    - roi2_passages: null
+  - slot_was_set:
+    - roi2_persistence_time: null
+  - action: utter_ask_stopping
+  - intent: goodbye
+  - action: action_reset
+  - action: utter_goodbye

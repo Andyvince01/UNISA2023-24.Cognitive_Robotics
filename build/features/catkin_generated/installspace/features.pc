@@ -1,0 +1,8 @@
+prefix=/home/andyvince01/Desktop/Project/install
+
+Name: features
+Description: Description of features
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: 

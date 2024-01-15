@@ -1,0 +1,13 @@
+<launch>
+	<arg name="node_start_delay" default="30.0"/>
+	<arg name="nao_ip" default="$(optenv NAO_IP 10.0.1.230)" />
+	<arg name="nao_port" default="$(optenv NAO_PORT 9559)" />
+	<!-- Flask App for Tablet -->
+	<node name="flask_app" pkg="features" type="app.py" output="screen">
+		<env name="FLASK_APP" value="app.py"/>
+		<env name="FLASK_ENV" value="development"/>
+	</node>
+	<!-- Launch Pepper Nodes -->
+	<node pkg="features" type="wakeup_rest_node.py" name="wakeup_rest_node" required="true" args="--ip=$(arg nao_ip) --port=$(arg nao_port)" output="screen" />
+	<node pkg="features" type="tablet_node.py" name="tablet_node" required="true" args="--ip=$(arg nao_ip) --port=$(arg nao_port)" output="screen" />
+</launch>

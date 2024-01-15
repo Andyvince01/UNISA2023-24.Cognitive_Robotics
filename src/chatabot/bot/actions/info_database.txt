@@ -1,0 +1,40 @@
+Ecco un riepilogo statistico per ogni campo del file JSON formattato:
+
+- **Genere**:
+  - Maschile: 8 persone
+  - Femminile: 7 persone
+
+- **Borsa**:
+  - Con borsa: 8 persone
+  - Senza borsa: 7 persone
+
+- **Cappello**:
+  - Con cappello: 8 persone
+  - Senza cappello: 7 persone
+
+- **Colore del capo superiore**:
+  - Rosso: 2 persone
+  - Bianco: 3 persone
+  - Blu: 2 persone
+  - Verde: 2 persone
+  - Nero: 2 persone
+  - Giallo: 1 persona
+  - Grigio: 1 persona
+  - Viola: 1 persona
+  - Arancione: 1 persona
+
+- **Colore del capo inferiore**:
+  - Blu: 1 persona
+  - Bianco: 2 persone
+  - Nero: 2 persone
+  - Giallo: 2 persone
+  - Viola: 1 persona
+  - Grigio: 1 persona
+  - Verde: 1 persona
+  - Arancione: 1 persona
+  - Marrone: 1 persona
+  - Rosa: 1 persona
+  - Grigio chiaro: 1 persona
+  - Rosso: 1 persona
+
+Queste statistiche offrono una panoramica dettagliata delle caratteristiche delle persone nel dataset.

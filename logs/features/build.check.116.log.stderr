@@ -1,0 +1,13 @@
+[31m[1mCMake Error[0m at /opt/ros/noetic/share/catkin/cmake/assert.cmake:20 (message):
+
+
+  Assertion failed: file
+  '/home/andyvince01/Desktop/Project/src/features/srv/WakeUp.rsv' does not
+  exist.  Message: service file not found
+
+[36mCall Stack (most recent call first):[0m
+  /opt/ros/noetic/share/genmsg/cmake/genmsg-extras.cmake:170 (assert_file_exists)
+  CMakeLists.txt:60 (add_service_files)
+
+
+make: *** [Makefile:810: cmake_check_build_system] Error 1

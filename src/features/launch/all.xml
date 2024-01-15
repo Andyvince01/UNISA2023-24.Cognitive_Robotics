@@ -1,0 +1,35 @@
+<launch>
+	<arg name="node_start_delay" default="15.0"/>
+	<arg name="nao_ip" default="$(optenv NAO_IP 10.0.1.230)" />
+	<arg name="nao_port" default="$(optenv NAO_PORT 9559)" />
+	<arg name="pepper_on" default="True"/>
+	<arg name="pepper_camera_on" default="True"/>
+	<arg name="mic_index" default="2" />
+	<!-- Launch Chatbot -->
+	<node pkg="chatbot" name="rasa_action" type="rasa_action.sh" output="screen"/>
+	<node pkg="chatbot" name="rasa_server" type="rasa_server.sh" output="screen"/> 
+	<node pkg="chatbot" name="dialogue_server" type="dialogue_server.py" output="screen" launch-prefix="bash -c 'sleep $(arg node_start_delay); $0 $@' "/>	
+	<!-- Launch People and Face Detector -->
+	<node pkg="features" type="people_detector_node.py" name="people_detector_node" output="screen" launch-prefix="bash -c 'sleep $(arg node_start_delay); $0 $@' "/>
+	<node pkg="features" type="face_detector_node.py" name="face_detector_node" output="screen" launch-prefix="bash -c 'sleep $(arg node_start_delay); $0 $@' "/>
+	<node pkg="features" type="visualization_node.py" name="visualization_node" output="screen" launch-prefix="bash -c 'sleep $(arg node_start_delay); $0 $@' "/>
+	<!-- Launch Audio Speech Recognition and Speech to Text -->
+	<node pkg="features" type="voice_detection_node.py" name="voice_detection_node" output="screen" args="--mic_index=$(arg mic_index)" launch-prefix="gnome-terminal -- bash -c 'sleep $(arg node_start_delay); $0 $@' "/>
+	<node pkg="features" type="asr_node.py" name="asr_node" output="screen" launch-prefix="bash -c 'sleep $(arg node_start_delay); $0 $@' "/>
+	<!-- Launch Pepper Nodes -->
+	<node pkg="features" type="image_publisher_node.py" name="image_publisher_node" output="screen" args="--pepper_camera_on=$(arg pepper_camera_on) --ip=$(arg nao_ip) --port=$(arg nao_port)" launch-prefix="bash -c 'sleep $(arg node_start_delay); $0 $@' "/>
+	<group if='$(eval pepper_on==True)'>
+		<!-- Flask App for Tablet -->
+		<node name="flask_app" pkg="features" type="app.py" output="screen">
+			<env name="FLASK_APP" value="app.py"/>
+			<env name="FLASK_ENV" value="development"/>
+		</node>
+		<!-- Pepper Nodes App for Tablet -->
+		<node pkg="features" type="wakeup_rest_node.py" name="wakeup_rest_node" required="true" args="--ip=$(arg nao_ip) --port=$(arg nao_port)" output="screen" />
+		<node pkg="features" type="tablet_node.py" name="tablet_node" required="true" args="--ip=$(arg nao_ip) --port=$(arg nao_port)" output="screen" />
+		<node pkg="features" type="text2speech_node.py" name="text2speech" required="true" args="--ip=$(arg nao_ip) --port=$(arg nao_port)" output="screen" />
+		<node pkg="features" type="animation_node.py" name="animation_node" required="true" args="--ip=$(arg nao_ip) --port=$(arg nao_port)" output="screen" />
+	</group>
+	<!-- Launch Core Node -->
+	<node pkg="features" type="behavior_manager_node.py" name="behavior_manager_node" output="screen" args = "--pepper_on=$(arg pepper_on)" launch-prefix="bash -c 'sleep 60; $0 $@' "/>
+</launch>

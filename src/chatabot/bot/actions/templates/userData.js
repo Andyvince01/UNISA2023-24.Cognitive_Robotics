@@ -1,0 +1,1 @@
+var userData = {"gender": "female", "upper_color": "red", "lower_color": "blue", "hat": true, "bag": false};

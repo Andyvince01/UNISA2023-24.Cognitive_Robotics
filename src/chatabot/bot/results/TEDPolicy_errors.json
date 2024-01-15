@@ -1,0 +1,652 @@
+[
+  {
+    "text": "How many guys wear a red shirt?",
+    "entities": [
+      {
+        "start": 21,
+        "end": 24,
+        "value": "red",
+        "entity": "color"
+      },
+      {
+        "start": 25,
+        "end": 30,
+        "value": "top",
+        "entity": "clothing"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "and how many of them aren't wearing orange leggings?",
+    "entities": [
+      {
+        "start": 21,
+        "end": 27,
+        "value": "aren't",
+        "entity": "negation"
+      },
+      {
+        "start": 36,
+        "end": 42,
+        "value": "orange",
+        "entity": "color"
+      },
+      {
+        "start": 43,
+        "end": 51,
+        "value": "trouser",
+        "entity": "clothing"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "How many people wear a hat but not a purse?",
+    "entities": [
+      {
+        "start": 23,
+        "end": 26,
+        "value": "hat",
+        "entity": "clothing"
+      },
+      {
+        "start": 31,
+        "end": 34,
+        "value": "not",
+        "entity": "negation"
+      },
+      {
+        "start": 37,
+        "end": 42,
+        "value": "bag",
+        "entity": "clothing"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Instead, how many are the people that don't carry a bag but are wearing a beret?",
+    "entities": [
+      {
+        "start": 38,
+        "end": 43,
+        "value": "don't",
+        "entity": "negation"
+      },
+      {
+        "start": 52,
+        "end": 55,
+        "value": "bag",
+        "entity": "clothing"
+      },
+      {
+        "start": 74,
+        "end": 79,
+        "value": "hat",
+        "entity": "clothing"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Could you tell me the number of people who are currently wearing a black shirt, brown pants, but neither a hat nor a bag?",
+    "entities": [
+      {
+        "start": 67,
+        "end": 72,
+        "value": "black",
+        "entity": "color"
+      },
+      {
+        "start": 73,
+        "end": 78,
+        "value": "top",
+        "entity": "clothing"
+      },
+      {
+        "start": 80,
+        "end": 85,
+        "value": "brown",
+        "entity": "color"
+      },
+      {
+        "start": 86,
+        "end": 91,
+        "value": "trouser",
+        "entity": "clothing"
+      },
+      {
+        "start": 97,
+        "end": 104,
+        "value": "neither",
+        "entity": "negation"
+      },
+      {
+        "start": 107,
+        "end": 110,
+        "value": "hat",
+        "entity": "clothing"
+      },
+      {
+        "start": 111,
+        "end": 114,
+        "value": "nor",
+        "entity": "negation"
+      },
+      {
+        "start": 117,
+        "end": 120,
+        "value": "bag",
+        "entity": "clothing"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Instead, how many of them are also carrying a bag?",
+    "entities": [
+      {
+        "start": 46,
+        "end": 49,
+        "value": "bag",
+        "entity": "clothing"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Can you determine the number of people wearing a blue t-shirt?",
+    "entities": [
+      {
+        "start": 49,
+        "end": 53,
+        "value": "blue",
+        "entity": "color"
+      },
+      {
+        "start": 54,
+        "end": 61,
+        "value": "top",
+        "entity": "clothing"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "and how many of them are female?",
+    "entities": [
+      {
+        "start": 25,
+        "end": 31,
+        "value": "female",
+        "entity": "gender"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I can no longer find my mama. She is wearing a brown vest, blue jeans but not a hat.",
+    "entities": [
+      {
+        "start": 24,
+        "end": 28,
+        "value": "female",
+        "entity": "gender"
+      },
+      {
+        "start": 30,
+        "end": 33,
+        "value": "female",
+        "entity": "gender"
+      },
+      {
+        "start": 47,
+        "end": 52,
+        "value": "brown",
+        "entity": "color"
+      },
+      {
+        "start": 53,
+        "end": 57,
+        "value": "top",
+        "entity": "clothing"
+      },
+      {
+        "start": 59,
+        "end": 63,
+        "value": "blue",
+        "entity": "color"
+      },
+      {
+        "start": 64,
+        "end": 69,
+        "value": "trouser",
+        "entity": "clothing"
+      },
+      {
+        "start": 74,
+        "end": 77,
+        "value": "not",
+        "entity": "negation"
+      },
+      {
+        "start": 80,
+        "end": 83,
+        "value": "hat",
+        "entity": "clothing"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "and how many of them are boys?",
+    "entities": [
+      {
+        "start": 25,
+        "end": 29,
+        "value": "male",
+        "entity": "gender"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I can no longer find my daughter. She is wearing a pink Peppa Pig t-shirt and a wool hat.",
+    "entities": [
+      {
+        "start": 24,
+        "end": 32,
+        "value": "female",
+        "entity": "gender"
+      },
+      {
+        "start": 34,
+        "end": 37,
+        "value": "female",
+        "entity": "gender"
+      },
+      {
+        "start": 51,
+        "end": 55,
+        "value": "pink",
+        "entity": "color"
+      },
+      {
+        "start": 66,
+        "end": 73,
+        "value": "top",
+        "entity": "clothing"
+      },
+      {
+        "start": 85,
+        "end": 88,
+        "value": "hat",
+        "entity": "clothing"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I can no longer find my friend. He is wearing a hat, blue leggings and a white vest but not a rucksack.",
+    "entities": [
+      {
+        "start": 32,
+        "end": 34,
+        "value": "male",
+        "entity": "gender"
+      },
+      {
+        "start": 48,
+        "end": 51,
+        "value": "hat",
+        "entity": "clothing"
+      },
+      {
+        "start": 53,
+        "end": 57,
+        "value": "blue",
+        "entity": "color"
+      },
+      {
+        "start": 58,
+        "end": 66,
+        "value": "trouser",
+        "entity": "clothing"
+      },
+      {
+        "start": 73,
+        "end": 78,
+        "value": "white",
+        "entity": "color"
+      },
+      {
+        "start": 79,
+        "end": 83,
+        "value": "top",
+        "entity": "clothing"
+      },
+      {
+        "start": 88,
+        "end": 91,
+        "value": "not",
+        "entity": "negation"
+      },
+      {
+        "start": 94,
+        "end": 102,
+        "value": "bag",
+        "entity": "clothing"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Sorry. I made a mistake. He is wearing black leggings, not blue ones.",
+    "entities": [
+      {
+        "start": 25,
+        "end": 27,
+        "value": "male",
+        "entity": "gender"
+      },
+      {
+        "start": 39,
+        "end": 44,
+        "value": "black",
+        "entity": "color"
+      },
+      {
+        "start": 45,
+        "end": 53,
+        "value": "trouser",
+        "entity": "clothing"
+      },
+      {
+        "start": 55,
+        "end": 58,
+        "value": "not",
+        "entity": "negation"
+      },
+      {
+        "start": 59,
+        "end": 63,
+        "value": "blue",
+        "entity": "color"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I can no longer find my grandma. Are you able to find her?",
+    "entities": [
+      {
+        "start": 24,
+        "end": 31,
+        "value": "female",
+        "entity": "gender"
+      },
+      {
+        "start": 54,
+        "end": 57,
+        "value": "female",
+        "entity": "gender"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "purple",
+    "entities": [
+      {
+        "start": 0,
+        "end": 6,
+        "value": "purple",
+        "entity": "color"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I can no longer find my son. He wears a purple hoodie and green jeans but does not wear a beret.",
+    "entities": [
+      {
+        "text": "I can no longer find my son. He wears a purple hoodie and green jeans but does not wear a beret.",
+        "start": 24,
+        "end": 27,
+        "entity": "gender",
+        "value": "male"
+      },
+      {
+        "text": "I can no longer find my son. He wears a purple hoodie and green jeans but does not wear a beret.",
+        "start": 29,
+        "end": 31,
+        "entity": "gender",
+        "value": "male"
+      },
+      {
+        "text": "I can no longer find my son. He wears a purple hoodie and green jeans but does not wear a beret.",
+        "start": 40,
+        "end": 46,
+        "entity": "color",
+        "value": "purple"
+      },
+      {
+        "text": "I can no longer find my son. He wears a purple hoodie and green jeans but does not wear a beret.",
+        "start": 47,
+        "end": 53,
+        "entity": "clothing",
+        "value": "top"
+      },
+      {
+        "text": "I can no longer find my son. He wears a purple hoodie and green jeans but does not wear a beret.",
+        "start": 58,
+        "end": 63,
+        "entity": "color",
+        "value": "green"
+      },
+      {
+        "text": "I can no longer find my son. He wears a purple hoodie and green jeans but does not wear a beret.",
+        "start": 64,
+        "end": 69,
+        "entity": "clothing",
+        "value": "trouser"
+      },
+      {
+        "text": "I can no longer find my son. He wears a purple hoodie and green jeans but does not wear a beret.",
+        "start": 79,
+        "end": 82,
+        "entity": "negation",
+        "value": "not"
+      },
+      {
+        "text": "I can no longer find my son. He wears a purple hoodie and green jeans but does not wear a beret.",
+        "start": 90,
+        "end": 95,
+        "entity": "clothing",
+        "value": "hat"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I can no longer find my cousin. She is wearing a blue sweater but neither a hat nor a purse.",
+    "entities": [
+      {
+        "start": 32,
+        "end": 35,
+        "value": "female",
+        "entity": "gender"
+      },
+      {
+        "start": 49,
+        "end": 53,
+        "value": "blue",
+        "entity": "color"
+      },
+      {
+        "start": 54,
+        "end": 61,
+        "value": "top",
+        "entity": "clothing"
+      },
+      {
+        "start": 66,
+        "end": 73,
+        "value": "neither",
+        "entity": "negation"
+      },
+      {
+        "start": 76,
+        "end": 79,
+        "value": "hat",
+        "entity": "clothing"
+      },
+      {
+        "start": 80,
+        "end": 83,
+        "value": "nor",
+        "entity": "negation"
+      },
+      {
+        "start": 86,
+        "end": 91,
+        "value": "bag",
+        "entity": "clothing"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "How many people have walked past the supermarket for eight seconds but not for sixty-one times?",
+    "entities": [
+      {
+        "start": 37,
+        "end": 48,
+        "value": "supermarket",
+        "entity": "place"
+      },
+      {
+        "start": 53,
+        "end": 66,
+        "value": "eight seconds",
+        "entity": "duration"
+      },
+      {
+        "start": 71,
+        "end": 74,
+        "value": "not",
+        "entity": "negation"
+      },
+      {
+        "start": 79,
+        "end": 94,
+        "value": "sixty-one times",
+        "entity": "passages"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Can u tell me how many people of male gender have walked past the bar for twenty-eight times and how many of them don't wear a visor?",
+    "entities": [
+      {
+        "start": 33,
+        "end": 37,
+        "value": "male",
+        "entity": "gender"
+      },
+      {
+        "start": 66,
+        "end": 69,
+        "value": "bar",
+        "entity": "place"
+      },
+      {
+        "start": 74,
+        "end": 92,
+        "value": "twenty-eight times",
+        "entity": "passages"
+      },
+      {
+        "start": 114,
+        "end": 119,
+        "value": "don't",
+        "entity": "negation"
+      },
+      {
+        "start": 127,
+        "end": 132,
+        "value": "hat",
+        "entity": "clothing"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "How many people don't wear a red dress?",
+    "entities": [
+      {
+        "start": 16,
+        "end": 21,
+        "value": "don't",
+        "entity": "negation"
+      },
+      {
+        "start": 29,
+        "end": 32,
+        "value": "red",
+        "entity": "color"
+      },
+      {
+        "start": 33,
+        "end": 38,
+        "value": "top",
+        "entity": "clothing"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "and how many of them don't carry a bag?",
+    "entities": [
+      {
+        "start": 21,
+        "end": 26,
+        "value": "don't",
+        "entity": "negation"
+      },
+      {
+        "start": 35,
+        "end": 38,
+        "value": "bag",
+        "entity": "clothing"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "How many male people are currently in the mall?",
+    "entities": [
+      {
+        "start": 9,
+        "end": 13,
+        "value": "male",
+        "entity": "gender"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "How many people female people are there instead?",
+    "entities": [
+      {
+        "start": 16,
+        "end": 22,
+        "value": "female",
+        "entity": "gender"
+      }
+    ],
+    "predicted_entities": []
+  }
+]

@@ -1,0 +1,8 @@
+prefix=/home/andyvince01/Desktop/Project/devel/.private/chatbot
+
+Name: chatbot
+Description: Description of chatbot
+Version: 0.0.0
+Cflags: -I/home/andyvince01/Desktop/Project/devel/.private/chatbot/include
+Libs: -L${prefix}/lib 
+Requires: 
