@@ -10,7 +10,6 @@ from threading import Lock
 from vision_msgs.msg import Detection2D, Detection2DArray, ObjectHypothesisWithPose
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
-
 FACE_PROTO = os.path.join(script_dir, "FaceDetectorModels", "opencv_face_detector.pbtxt")
 FACE_MODEL = os.path.join(script_dir, "FaceDetectorModels", "opencv_face_detector_uint8.pb")
 FACE_SCORE_TRESHOLD = 0.5

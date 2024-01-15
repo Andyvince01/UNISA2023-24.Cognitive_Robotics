@@ -8,9 +8,9 @@ from sensor_msgs.msg import Image
 from std_msgs.msg import Bool
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
-FACE_PROTO = os.path.join(script_dir, "../scripts/Detector/FaceDetectorModels", "opencv_face_detector.pbtxt")
-FACE_MODEL = os.path.join(script_dir, "../scripts/Detector/FaceDetectorModels", "opencv_face_detector_uint8.pb")
-FACE_SCORE_TRESHOLD = 0.5
+PEOPLE_PROTO = os.path.join(script_dir, "../scripts/Detector/PeopleDetectorModels/MobileNet", "MobileNetSSD_deploy.prototxt")
+PEOPLE_MODEL = os.path.join(script_dir, "../scripts/Detector/PeopleDetectorModels/MobileNet", "MobileNetSSD_deploy.caffemodel")
+POEPLE_SCORE_THREHSOLD = 0.5
 
 VIDEOS_PATH = os.path.join(script_dir, "TestSet/V*")
 DIR_LIST = [path for path in glob.glob(os.path.join(VIDEOS_PATH,"**"), recursive=True) if os.path.isdir(path)]
@@ -19,7 +19,7 @@ FRAMES_LIST = [path for dir_video in DIR_LIST for path in glob.glob(os.path.join
 FRAMES_LIST = sorted(FRAMES_LIST)
 print(DIR_LIST)
 
-class FaceDetectorTest():
+class PeopleDetectorTest():
    """
    Class for detecting faces in images using the pre-trained FaceNet model.
 
@@ -42,7 +42,7 @@ class FaceDetectorTest():
       Loads the FaceNet model, sets up a ROS publisher, and initializes the image lock.
       """
       self._br = CvBridge()
-      self._faceNet = cv2.dnn.readNet(FACE_PROTO, FACE_MODEL)
+      self._model = cv2.dnn.readNet(PEOPLE_PROTO, PEOPLE_MODEL)
       self._predictions = []
       self._ground_truths = []
       
@@ -65,7 +65,9 @@ class FaceDetectorTest():
       for frame in FRAMES_LIST:
          img = cv2.imread(os.path.join(frame))
          self.__handle_detector(img)
-                  
+      
+      print(self._predictions)
+      
       precision, recall, f1_score = self.__calculate_metrics()
       print(f"Precision = {precision} | Recall = {recall} | f1_score = {f1_score}")
 
@@ -84,32 +86,32 @@ class FaceDetectorTest():
       frame = msg
       image = frame.copy() if frame is not None else None
 
-      blob = cv2.dnn.blobFromImage(image, 1.0, (300, 300), [104, 117, 123], swapRB=True, crop=False)
+      blob = cv2.dnn.blobFromImage(image, 0.007843, (300, 300), 127.5)
 
-      self._faceNet.setInput(blob)
-      detections = self._faceNet.forward()
+      self._model.setInput(blob)
+      detections = self._model.forward()
                
-      face_detection = False      
-         
+      person_detected = False         
+      
       for i in range(detections.shape[2]):
          score = detections[0, 0, i, 2]
-         if score > FACE_SCORE_TRESHOLD and detections[0, 0, i, 5] < 1 and detections[0, 0, i, 6] < 1:
-            face_detection = True
+         if score > POEPLE_SCORE_THREHSOLD and int(detections[0, 0, i, 1]) == 15:
+            person_detected = True
             break
+         
+      self._predictions.append(person_detected)
             
-      self._predictions.append(face_detection)
-      
    def __calculate_metrics(self,):
       true_positives = 0
       false_positives = 0
       false_negatives = 0
 
       for pred, gt in zip(self._predictions, self._ground_truths):
-         if pred == gt == True:  
+         if pred == gt == True:
             true_positives += 1
-         elif pred == True and gt == False:  
+         elif pred == True and gt == False: 
             false_positives += 1
-         elif pred == False and gt == True:  
+         elif pred == False and gt == True:
             false_negatives += 1
 
       precision = true_positives / (true_positives + false_positives) if (true_positives + false_positives) > 0 else 0
@@ -133,35 +135,5 @@ class Utils:
                   file.write(video + ",False\n")
 
 if __name__ == '__main__':
-   face_detector_test = FaceDetectorTest()
-   face_detector_test()
-   
-# if __name__ == '__main__':
-#     import argparse
-#     parser = argparse.ArgumentParser(description='Process image file.')
-#     parser.add_argument('--input_file', type=str, help='Path to the image file')
-#     args = parser.parse_args()
-
-#     faceDetector = FaceDetector()
-
-#     # Se l'argomento --input_file non è specificato, acquisisci dalla webcam
-#     if args.input_file is None:
-#         cap = cv2.VideoCapture(0)
-#         while True:
-#             ret, frame = cap.read()
-#             if not ret:
-#                 print("Errore durante la lettura dal dispositivo di input.")
-#                 break
-#             frameFace, bboxes = faceDetector(frame)
-#             print(bboxes)
-#             cv2.imshow("Face Detection", frameFace)
-#             if cv2.waitKey(1) & 0xFF == ord('q'):
-#                 break
-#         cap.release()
-#         cv2.destroyAllWindows()
-#     else:
-#         frame = cv2.imread(args.input_file)
-#         frameFace, bboxes = faceDetector(frame)
-#         cv2.imshow("Face Detection", frameFace)
-#         cv2.waitKey(0)
-#         cv2.destroyAllWindows()
+   people_detector_test = PeopleDetectorTest()
+   people_detector_test()
