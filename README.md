@@ -39,3 +39,6 @@ In particular, the test, of which you can see an example application in the vide
 
 ### Other Test
 The report.pdf explains how to test the individual modules implemented.
+
+### Note
+To run the code correctly on Pepper, a high-performance computer is required. Alternatively, in order to prevent the RASA server from connecting after the behaviour_manager node, it is necessary to increase the start delay of the latter in the `all.xml` file (e.g., 120).
