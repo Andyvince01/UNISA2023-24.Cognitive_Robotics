@@ -34,7 +34,7 @@ In particular, the test, of which you can see an example application in the vide
    - **Find Person with changing attributes**: The third case concerns the case where the user changes a previously imposed attribute before submitting the form.
    - **Find Person with stop intent**: The fourth case concerns the case where the user finds the person they are looking for (e.g. the person contacts the user by phone). In this case, all slots are reset. The same procedure occurs in the case where the intent is `goodbye`.
    - **Find Person with `count_people` intent}**: The fifth case concerns the case where the user requests a count operation while the form is active. In this case, all slots are reset and the count operation is performed.
-	\end{enumerate}
+	\end{enumerate} (~~This test is not in the video due to timing problems with Pepper.~~)
 5. **Goodbye**: The person says goodbye to Pepper, who promptly bids him farewell with a farewell gesture and message.
 
 ### Other Test
