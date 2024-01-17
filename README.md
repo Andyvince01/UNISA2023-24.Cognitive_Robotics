@@ -3,7 +3,7 @@
 $\textsf{{\color[rgb]{0.0, 0.0, 1.0}A}{\color[rgb]{0.1, 0.0, 0.9}b}{\color[rgb]{0.2, 0.0, 0.8}s}{\color[rgb]{0.3, 0.0, 0.7}t}{\color[rgb]{0.4, 0.0, 0.6}r}{\color[rgb]{0.5, 0.0, 0.5}a}{\color[rgb]{0.6, 0.0, 0.4}c}{\color[rgb]{0.7, 0.0, 0.3}t}}$: This project introduces an AI-assisted robotic system, designed for shopping malls, with **Pepper** at its core acting as a guardian and interactive assistant. Pepper relies on a connected camera and video analytic system for detecting people and recognizing their attributes, such as gender, clothing color, and accessories. However, it does not process this data; instead, it accesses the information from a database. This allows Pepper to interact with visitors through spoken language, enhancing customer experience by serving as an interactive interface to the mall's sophisticated data processing system.
 
 ## 🗺️ ROS Based Architecture
-![Ros Architecture](https://github.com/Andyvince01/Cognitive_Robotics/blob/ecbea912f3bbbe88a5ecf95cbf2d2a2ef587e3ed/ROS%20Architecture.jpg)
+![Ros Architecture](https://github.com/Andyvince01/Cognitive_Robotics/blob/main/ROS%20Architecture.jpg)
 *Design of the ROS-based architecture behind Pepper's operation as a the robotic guardian of the shopping mall.*
 
 ## 🛠 Testing
