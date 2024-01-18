@@ -44,4 +44,4 @@ The report.pdf explains how to test the individual modules implemented.
 To run the code correctly on Pepper, a high-performance computer is required. Alternatively, in order to prevent the RASA server from connecting after the behaviour_manager node, it is necessary to increase the start delay of the latter in the `all.xml` file (e.g., 120).
 
 ## Demo
-[![Demo](https://drive.google.com/file/d/14s5PQ8ZDx-E_M3POsu9YPUAaaCRzbk5J/view?usp=sharing)](https://drive.google.com/file/d/1cByygt-HeLCd18607BKksqAAawNyKmPt/view?usp=sharing)
+[![Demo](https://github.com/Andyvince01/Unisa2023-24.Cognitive_Robotics/blob/main/Pepper.png?raw=true)](https://drive.google.com/file/d/1cByygt-HeLCd18607BKksqAAawNyKmPt/view?usp=sharing)
