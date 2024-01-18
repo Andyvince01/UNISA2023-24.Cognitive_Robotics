@@ -1,5 +1,5 @@
 <launch>
-	<arg name="node_start_delay" default="15.0"/>
+	<arg name="node_start_delay" default="60.0"/>
 	<arg name="nao_ip" default="$(optenv NAO_IP 10.0.1.230)" />
 	<arg name="nao_port" default="$(optenv NAO_PORT 9559)" />
 	<arg name="pepper_on" default="True"/>
@@ -8,7 +8,7 @@
 	<!-- Launch Chatbot -->
 	<node pkg="chatbot" name="rasa_action" type="rasa_action.sh" output="screen"/>
 	<node pkg="chatbot" name="rasa_server" type="rasa_server.sh" output="screen"/> 
-	<node pkg="chatbot" name="dialogue_server" type="dialogue_server.py" output="screen" launch-prefix="bash -c 'sleep $(arg node_start_delay); $0 $@' "/>	
+	<node pkg="chatbot" name="dialogue_server" type="dialogue_server.py" output="screen" />	
 	<!-- Launch People and Face Detector -->
 	<node pkg="features" type="people_detector_node.py" name="people_detector_node" output="screen" launch-prefix="bash -c 'sleep $(arg node_start_delay); $0 $@' "/>
 	<node pkg="features" type="face_detector_node.py" name="face_detector_node" output="screen" launch-prefix="bash -c 'sleep $(arg node_start_delay); $0 $@' "/>
@@ -31,5 +31,5 @@
 		<node pkg="features" type="animation_node.py" name="animation_node" required="true" args="--ip=$(arg nao_ip) --port=$(arg nao_port)" output="screen" />
 	</group>
 	<!-- Launch Core Node -->
-	<node pkg="features" type="behavior_manager_node.py" name="behavior_manager_node" output="screen" args = "--pepper_on=$(arg pepper_on)" launch-prefix="bash -c 'sleep 60; $0 $@' "/>
+	<node pkg="features" type="behavior_manager_node.py" name="behavior_manager_node" output="screen" args = "--pepper_on=$(arg pepper_on)" launch-prefix="bash -c 'sleep $(arg node_start_delay); $0 $@' "/>
 </launch>

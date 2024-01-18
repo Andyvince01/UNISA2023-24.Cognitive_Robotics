@@ -145,12 +145,15 @@ class BehaviorManagerNode():
         with self._people_lock:
             current_time = rospy.get_time()
             # rospy.loginfo(int(current_time - self._time_face_presence))
-            if self._person_presence is False:
-                self.__handle_chatbot("/restart")
-                return False
-            elif self._face_presence is False and (int(current_time - self._time_face_presence) > 5):
-                self.__handle_chatbot("/restart")
-                rospy.logwarn(f"Face not detected for more than {int(current_time - self._time_face_presence)} seconds. Interrupting current operation.")
+            try:
+                if self._person_presence is False:
+                    self.__handle_chatbot("/restart")
+                    return False
+                elif self._face_presence is False and (int(current_time - self._time_face_presence) > 5):
+                    self.__handle_chatbot("/restart")
+                    rospy.logwarn(f"Face not detected for more than {int(current_time - self._time_face_presence)} seconds. Interrupting current operation.")
+                    return False
+            except AttributeError:
                 return False
             return True
     
