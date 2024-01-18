@@ -21,28 +21,28 @@ class BehaviorManagerNode():
     an interactive engagement with users.
 
     Attributes:
-        _pepper_on (bool): Indicates if the robot (Pepper) is active.
-        _services (ServiceHandler): Manages ROS services for various features.
-        _people_lock (Lock): Thread lock for synchronizing access to person presence data.
-        _person_presence (bool): Tracks the presence of a person.
-        _face_presence (bool): Tracks the presence of a face.
-        _last_face_presence (bool): Stores the state of face presence in the previous check.
-        _time_face_presence (float): Timestamp of the last face presence.
+    - _pepper_on (bool): Indicates if the robot (Pepper) is active.
+    - _services (ServiceHandler): Manages ROS services for various features.
+    - _people_lock (Lock): Thread lock for synchronizing access to person presence data.
+    - _person_presence (bool): Tracks the presence of a person.
+    - _face_presence (bool): Tracks the presence of a face.
+    - _last_face_presence (bool): Stores the state of face presence in the previous check.
+    - _time_face_presence (float): Timestamp of the last face presence.
 
     Methods:
-        __init__(self, pepper_on): Initializes the node and services based on the robot's operational status.
-        __call__(self): Main loop handling the behavioral logic based on sensor inputs and service responses.
-        __check_face_presence(self): Checks and manages the state related to face presence.
-        __handle_animation(self, text): Handles animation based on the text context.
-        __handle_animation_in_thread(self, text): Manages animation in a separate thread.
-        __handle_person_detection(self, msg): Callback for person detection updates.
-        __handle_face_detection(self, msg): Callback for face detection updates.
-        __hadle_voice_detection(self): Manages voice detection service calls.
-        __handle_chatbot(self, text): Processes dialogue through the chatbot service.
-        __handle_s2t(self, audio): Converts speech to text.
-        __handle_t2s(self, text): Converts text to speech.
-        __handle_tablet(self, text): Displays text on the robot's tablet.
-        __handle_shutdown(self): Handles the shutdown of the node and services.
+    - __init__(self, pepper_on): Initializes the node and services based on the robot's operational status.
+    - __call__(self): Main loop handling the behavioral logic based on sensor inputs and service responses.
+    - __check_face_presence(self): Checks and manages the state related to face presence.
+    - __handle_animation(self, text): Handles animation based on the text context.
+    - __handle_animation_in_thread(self, text): Manages animation in a separate thread.
+    - __handle_person_detection(self, msg): Callback for person detection updates.
+    - __handle_face_detection(self, msg): Callback for face detection updates.
+    - __hadle_voice_detection(self): Manages voice detection service calls.
+    - __handle_chatbot(self, text): Processes dialogue through the chatbot service.
+    - __handle_s2t(self, audio): Converts speech to text.
+    - __handle_t2s(self, text): Converts text to speech.
+    - __handle_tablet(self, text): Displays text on the robot's tablet.
+    - __handle_shutdown(self): Handles the shutdown of the node and services.
     '''
     
     def __init__(self, pepper_on : bool):
@@ -52,7 +52,7 @@ class BehaviorManagerNode():
         variables for managing human interaction.
 
         Args:
-            pepper_on (bool): Indicates if the Pepper robot is active and should initialize additional services.
+        - pepper_on (bool): Indicates if the Pepper robot is active and should initialize additional services.
         '''
         self._pepper_on = pepper_on
         self._services = ServiceHandler()
@@ -140,7 +140,7 @@ class BehaviorManagerNode():
         for a certain duration, triggering a reset in the chatbot interaction.
 
         Returns:
-            bool: True if a face is present, False otherwise.
+        - bool: True if a face is present, False otherwise.
         '''
         with self._people_lock:
             current_time = rospy.get_time()
@@ -182,7 +182,7 @@ class BehaviorManagerNode():
         the main execution thread of the node.
 
         Args:
-            text (str): The text based on which the animation is selected and executed.
+        - text (str): The text based on which the animation is selected and executed.
         '''
         thread = Thread(target=self.__handle_animation, args=(text,))
         thread.start()
@@ -193,7 +193,7 @@ class BehaviorManagerNode():
         and returns the response.
 
         Args:
-            text (str, optional): The text to send to the chatbot. Defaults to "Hello there!".
+        - text (str, optional): The text to send to the chatbot. Defaults to "Hello there!".
 
         Returns:
             The response from the chatbot.
@@ -207,7 +207,7 @@ class BehaviorManagerNode():
         recorded time of face presence.
 
         Args:
-            msg (Detection2DArray): The message containing face detection data.
+        - msg (Detection2DArray): The message containing face detection data.
         '''
         self._last_face_presence = self._face_presence
         self._face_presence = True if len(msg.detections) > 0 else False
@@ -220,7 +220,7 @@ class BehaviorManagerNode():
         whether any detections are present in the message.
 
         Args:
-            msg (Detection2DArray): The message containing person detection data.
+        - msg (Detection2DArray): The message containing person detection data.
         '''
         self._person_presence = True if len(msg.detections) > 0 else False
        
@@ -230,7 +230,7 @@ class BehaviorManagerNode():
         and returns the converted text.
 
         Args:
-            audio: The audio data to be converted to text.
+        - audio: The audio data to be converted to text.
 
         Returns:
             The text converted from the audio input.
@@ -251,7 +251,7 @@ class BehaviorManagerNode():
         the speech synthesis process in the robot.
 
         Args:
-            text (str): Chatbot's answer.
+        - text (str): Chatbot's answer.
         '''
         self._services('t2s_service', String(text))
 
@@ -260,7 +260,7 @@ class BehaviorManagerNode():
         Updates the tablet screen according to chatbot's answer ('text').
         
         Args:
-            text (str): Chatbot's answer.
+        - text (str): Chatbot's answer.
         '''
         self._services('tablet_service', String(text))
     
