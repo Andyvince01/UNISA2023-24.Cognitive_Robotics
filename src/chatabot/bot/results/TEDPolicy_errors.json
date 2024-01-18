@@ -408,63 +408,55 @@
     "predicted_entities": []
   },
   {
-    "text": "I can no longer find my son. He wears a purple hoodie and green jeans but does not wear a beret.",
+    "text": "I can no longer find my son. He wears a purple hoodie and green jeans but doesn't wear a beret.",
     "entities": [
       {
-        "text": "I can no longer find my son. He wears a purple hoodie and green jeans but does not wear a beret.",
         "start": 24,
         "end": 27,
-        "entity": "gender",
-        "value": "male"
+        "value": "male",
+        "entity": "gender"
       },
       {
-        "text": "I can no longer find my son. He wears a purple hoodie and green jeans but does not wear a beret.",
         "start": 29,
         "end": 31,
-        "entity": "gender",
-        "value": "male"
+        "value": "male",
+        "entity": "gender"
       },
       {
-        "text": "I can no longer find my son. He wears a purple hoodie and green jeans but does not wear a beret.",
         "start": 40,
         "end": 46,
-        "entity": "color",
-        "value": "purple"
+        "value": "purple",
+        "entity": "color"
       },
       {
-        "text": "I can no longer find my son. He wears a purple hoodie and green jeans but does not wear a beret.",
         "start": 47,
         "end": 53,
-        "entity": "clothing",
-        "value": "top"
+        "value": "top",
+        "entity": "clothing"
       },
       {
-        "text": "I can no longer find my son. He wears a purple hoodie and green jeans but does not wear a beret.",
         "start": 58,
         "end": 63,
-        "entity": "color",
-        "value": "green"
+        "value": "green",
+        "entity": "color"
       },
       {
-        "text": "I can no longer find my son. He wears a purple hoodie and green jeans but does not wear a beret.",
         "start": 64,
         "end": 69,
-        "entity": "clothing",
-        "value": "trouser"
+        "value": "trouser",
+        "entity": "clothing"
       },
       {
-        "text": "I can no longer find my son. He wears a purple hoodie and green jeans but does not wear a beret.",
-        "start": 79,
-        "end": 82,
-        "entity": "negation",
-        "value": "not"
+        "start": 74,
+        "end": 81,
+        "value": "doesn't",
+        "entity": "negation"
       },
       {
-        "text": "I can no longer find my son. He wears a purple hoodie and green jeans but does not wear a beret.",
-        "start": 90,
-        "end": 95,
-        "entity": "clothing",
-        "value": "hat"
+        "start": 89,
+        "end": 94,
+        "value": "hat",
+        "entity": "clothing"
       }
     ],
     "predicted_entities": []

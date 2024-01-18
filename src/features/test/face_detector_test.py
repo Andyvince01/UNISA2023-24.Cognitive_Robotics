@@ -12,9 +12,8 @@ FACE_PROTO = os.path.join(script_dir, "../scripts/Detector/FaceDetectorModels", 
 FACE_MODEL = os.path.join(script_dir, "../scripts/Detector/FaceDetectorModels", "opencv_face_detector_uint8.pb")
 FACE_SCORE_TRESHOLD = 0.5
 
-VIDEOS_PATH = os.path.join(script_dir, "TestSet/V*")
+VIDEOS_PATH = os.path.join(script_dir, "TestSet/TestVideo*")
 DIR_LIST = [path for path in glob.glob(os.path.join(VIDEOS_PATH,"**"), recursive=True) if os.path.isdir(path)]
-# VIDEOS_LIST = [path for path in os.listdir(VIDEOS_PATH) if path.endswith(".mp4")]
 FRAMES_LIST = [path for dir_video in DIR_LIST for path in glob.glob(os.path.join(dir_video,"**"), recursive=True) if os.path.isfile(path)]
 FRAMES_LIST = sorted(FRAMES_LIST)
 print(DIR_LIST)
@@ -54,7 +53,7 @@ class FaceDetectorTest():
             lines = f.readlines()
             for line in lines:
                line = line.strip()
-               self._ground_truths.append(line.split(",")[1] == "True")
+               self._ground_truths.append(line.split(",")[2] == "True")
    
    def __call__(self) -> None:
       """
@@ -65,7 +64,7 @@ class FaceDetectorTest():
       for frame in FRAMES_LIST:
          img = cv2.imread(os.path.join(frame))
          self.__handle_detector(img)
-                  
+      
       precision, recall, f1_score = self.__calculate_metrics()
       print(f"Precision = {precision} | Recall = {recall} | f1_score = {f1_score}")
 
@@ -118,20 +117,6 @@ class FaceDetectorTest():
 
       return precision, recall, f1_score
    
-class Utils:
-   
-   @staticmethod
-   def create_annotation():
-      for dir_video in DIR_LIST:
-         dir_video = dir_video.split("/")[:-1]
-         dir_video[-1] += "_annotations.txt"
-         dir_video = "/".join(dir_video)
-         
-         with open(dir_video, "w") as file:
-            for video in FRAMES_LIST:
-               if video.split("/")[-2] in dir_video:
-                  file.write(video + ",False\n")
-
 if __name__ == '__main__':
    face_detector_test = FaceDetectorTest()
    face_detector_test()

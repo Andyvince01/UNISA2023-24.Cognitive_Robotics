@@ -16,13 +16,13 @@ class AnimationNode():
    showing tablet, and thinking, along with custom animations.
 
    Attributes:
-      _session (Session): A session object for communication with the robot.
-      _animation (ALAnimationPlayer): The animation player service used to run animations on the robot.
+   - _session (Session): A session object for communication with the robot.
+   - _animation (ALAnimationPlayer): The animation player service used to run animations on the robot.
 
    Methods:
-      __init__(self, ip, port): Initializes the animation node, setting up a session and the animation service.
-      __call__(self): Starts the ROS node and establishes the animation service.
-      __animate(self, msg: AnimationService) -> AnimationServiceResponse: Handles the animation requests 
+   - __init__(self, ip, port): Initializes the animation node, setting up a session and the animation service.
+   - __call__(self): Starts the ROS node and establishes the animation service.
+   - __animate(self, msg: AnimationService) -> AnimationServiceResponse: Handles the animation requests 
       based on the input message and executes the corresponding animation on the robot.
    '''
       
@@ -32,8 +32,8 @@ class AnimationNode():
       This method sets up the session and initializes the animation service for the robot.
 
       Args:
-         ip (str): The IP address of the robot.
-         port (int): The port number for establishing the connection.
+      - ip (str): The IP address of the robot.
+      - port (int): The port number for establishing the connection.
       '''
       self._session = Session(ip, port)
       self._animation = self._session.get_service("ALAnimationPlayer")
@@ -58,7 +58,7 @@ class AnimationNode():
       the animation service and retries the animation execution.
 
       Args:
-         msg (AnimationService): The input message containing the animation command.
+      - msg (AnimationService): The input message containing the animation command.
 
       Returns:
          AnimationServiceResponse: A response message indicating the completion of the animation request.

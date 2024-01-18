@@ -20,7 +20,6 @@ entities:
 - place
 - gender
 - duration
-- store_name
 slots:
   gender:
     type: text
@@ -192,25 +191,26 @@ responses:
   - text: I'm glad I could help. Feel free to reach out to me anytime you require support or have questions.
   - text: It has been a pleasure assisting you today. Should you require further help, please do not hesitate to contact me.
 actions:
-- utter_thanks
-- utter_greet
-- utter_help
-- utter_ask_stopping
-- action_count_people
-- action_reset
-- utter_please_rephrase
-- utter_goodbye
-- utter_submit_find_person_form
-- action_slot_mapping
-- action_submit
-- utter_capabilities
 - utter_ask_bag
 - utter_ask_gender
 - utter_ask_hat
 - utter_ask_lower_color
+- utter_ask_stopping
 - utter_ask_upper_color
+- utter_capabilities
 - utter_doubt
+- utter_goodbye
+- utter_greet
+- utter_help
+- utter_please_rephrase
+- utter_submit_find_person_form
+- utter_thanks
+- action_count_people
+- action_reset
+- action_slot_mapping
+- action_submit
 - validate_find_person_form
+
 forms:
   find_person_form:
     ignored_intents:

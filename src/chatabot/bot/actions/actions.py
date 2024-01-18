@@ -7,7 +7,7 @@ from rasa_sdk.types import DomainDict
 
 import logging
 import os
-from .CustomerTrackingSystem import CustomerTrackingSystem
+from .customer_tracking_system import CustomerTrackingSystem
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
 FILE_PATH = os.path.join(script_dir, "database.json")

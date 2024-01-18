@@ -913,9 +913,6 @@ stories:
   - action: utter_greet
   - action: utter_help
   - intent: nlu_fallback
-    entities:
-    - color: red
-    - clothing: top
   - action: utter_please_rephrase
   - intent: nlu_fallback
   - action: utter_please_rephrase

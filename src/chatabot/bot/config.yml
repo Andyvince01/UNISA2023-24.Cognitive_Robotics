@@ -27,15 +27,15 @@ pipeline:
     epochs: 100
     constrain_similarities: true
   - name: FallbackClassifier
-    threshold: 0.3                  # The threshold key is used to specify the threshold for NLU fallback. If the top intent’s confidence is below this, the fallback classifier ignores it and goes ahead with nlu_fallback.
+    threshold: 0.7                  # The threshold key is used to specify the threshold for NLU fallback. If the top intent’s confidence is below this, the fallback classifier ignores it and goes ahead with nlu_fallback.
     ambiguity_threshold: 0.1        # This key specifies how much the confidences of the top two intents should be to continue with regular conversation flow. If the difference in confidence scores is less than what’s specified here, the Fallback Classifier goes with nlu_fallback, regardless of whether the threshold condition is met.
 
 # Configuration for Rasa Core.
 # https://rasa.com/docs/rasa/core/policies/
 policies:
-  - name: MemoizationPolicy
   - name: RulePolicy
+  - name: MemoizationPolicy
   - name: TEDPolicy
-    max_history: 5
+    max_history: 6
     epochs: 100
     constrain_similarities: true

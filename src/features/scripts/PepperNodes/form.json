@@ -1,7 +1,7 @@
 {
-  "gender": "male",
-  "upper_color": "blue",
-  "lower_color": "red",
-  "bag": "None",
-  "hat": false
+  "gender": "female",
+  "upper_color": "yellow",
+  "lower_color": "green",
+  "bag": true,
+  "hat": true
 }

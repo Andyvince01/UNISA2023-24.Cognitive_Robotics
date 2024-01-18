@@ -16,15 +16,15 @@ class TabletNode():
    TabletNode class represents a ROS node for handling tablet interactions.
 
    Attributes:
-      _session (Session): An instance of the Session class for communication with the robot.
-      _tablet_proxy: A proxy for accessing the ALTabletService on the robot.
-      _parameters (dict): A dictionary containing parameters related to tablet interactions.
+   - _session (Session): An instance of the Session class for communication with the robot.
+   - _tablet_proxy: A proxy for accessing the ALTabletService on the robot.
+   - _parameters (dict): A dictionary containing parameters related to tablet interactions.
 
    Methods:
-      __init__(self, ip: str, port: int): Initializes the TabletNode with the specified IP and port.
-      __call__(self) -> None: Initiates the ROS node and starts the tablet service.
-      __handle_tablet(self, msg: TabletService) -> String: Handles incoming tablet service requests.
-      __update_json(self, text: str) -> None: Updates the _parameters dictionary based on the received text.
+   - __init__(self, ip: str, port: int): Initializes the TabletNode with the specified IP and port.
+   - __call__(self) -> None: Initiates the ROS node and starts the tablet service.
+   - __handle_tablet(self, msg: TabletService) -> String: Handles incoming tablet service requests.
+   - __update_json(self, text: str) -> None: Updates the _parameters dictionary based on the received text.
    """
 
    def __init__(self, ip, port):
@@ -32,8 +32,8 @@ class TabletNode():
       Initializes the TabletNode with the specified IP and port.
 
       Args:
-         ip (str): The IP address of the robot.
-         port (int): The port number for communication.
+      - ip (str): The IP address of the robot.
+      - port (int): The port number for communication.
 
       Returns:
          None
@@ -42,10 +42,10 @@ class TabletNode():
       self._tablet_proxy = self._session.get_service("ALTabletService")
       self._tablet_proxy.resetTablet()
       try:
-         self._tablet_proxy.showWebview(r"http://10.0.1.244:5000/Video")
+         self._tablet_proxy.showWebview(r"http://10.0.1.220:5000/Video")
       except:
          self._tablet_proxy = self._session.get_service("ALTabletService")
-         self._tablet_proxy.showWebview(r"http://10.0.1.244:5000/Video")
+         self._tablet_proxy.showWebview(r"http://10.0.1.220:5000/Video")
       self._parameters = {"gender": None, "upper_color": None, "lower_color": None, "bag": None, "hat": None}
 
    def __call__(self):
@@ -66,25 +66,25 @@ class TabletNode():
       Handles incoming tablet service requests.
 
       Args:
-         msg (TabletService): The received service request message.
+      - msg (TabletService): The received service request message.
 
       Returns:
-         String: An acknowledgment message.
+      - String: An acknowledgment message.
       """
       text = msg.input.data
       try:
          if "Let me check in my database." in text:
             self.__update_json(text)
-            self._tablet_proxy.showWebview(r"http://10.0.1.244:5000/Form")
+            self._tablet_proxy.showWebview(r"http://10.0.1.220:5000/Form")
          else:
-            self._tablet_proxy.showWebview(r"http://10.0.1.244:5000/Video")
+            self._tablet_proxy.showWebview(r"http://10.0.1.220:5000/Video")
       except:
          self._tablet_proxy = self._session.get_service("ALTabletService")
          if "Let me check in my database." in text:
             self.__update_json(text)
-            self._tablet_proxy.showWebview(r"http://10.0.1.244:5000/Form")
+            self._tablet_proxy.showWebview(r"http://10.0.1.220:5000/Form")
          else:
-            self._tablet_proxy.showWebview(r"http://10.0.1.244:5000/Video")
+            self._tablet_proxy.showWebview(r"http://10.0.1.220:5000/Video")
          
       return TabletServiceResponse(String("ACK"))
 
@@ -93,7 +93,7 @@ class TabletNode():
       Updates the _parameters dictionary based on the received text.
 
       Args:
-         text (str): The text received from the tablet.
+      - text (str): The text received from the tablet.
       """
       
       if len(text.split("\n")) == 1:

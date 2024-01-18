@@ -1,90 +1,258 @@
 [
   {
-    "text": "How are you?",
-    "intent": "nlu_fallback",
+    "text": "I must be going, Pepper. It was good to talk with you.",
+    "intent": "goodbye",
     "intent_prediction": {
-      "name": "goodbye",
-      "confidence": 0.00020603284065146
+      "name": "greet",
+      "confidence": 0.656997799873352
     }
   },
   {
-    "text": "Do you know where is the supermarket?",
-    "intent": "nlu_fallback",
+    "text": "Pepper, I'll see you soon. Thanks for everything.",
+    "intent": "goodbye",
     "intent_prediction": {
-      "name": "goodbye",
-      "confidence": 0.00014980626292526722
+      "name": "thanks",
+      "confidence": 0.8429746627807617
     }
   },
   {
-    "text": "Do you know where is the bar?",
-    "intent": "nlu_fallback",
+    "text": "of course",
+    "intent": "affirm",
     "intent_prediction": {
-      "name": "goodbye",
-      "confidence": 0.00018723895482253283
+      "name": "count_people",
+      "confidence": 0.9614864587783813
+    }
+  },
+  {
+    "text": "that sounds good",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.9447179436683655
     }
   },
   {
     "text": "How is the weather?",
     "intent": "nlu_fallback",
     "intent_prediction": {
-      "name": "goodbye",
-      "confidence": 6.773807399440557e-05
-    }
-  },
-  {
-    "text": "Can you tell me what is the capital of Italy?",
-    "intent": "nlu_fallback",
-    "intent_prediction": {
-      "name": "capabilities",
-      "confidence": 0.00010507514525670558
-    }
-  },
-  {
-    "text": "Do you know if there are restaurant in the shopping mall?",
-    "intent": "nlu_fallback",
-    "intent_prediction": {
-      "name": "stop",
-      "confidence": 6.0576909163501114e-05
-    }
-  },
-  {
-    "text": "how many animals are currently in the shopping mall?",
-    "intent": "nlu_fallback",
-    "intent_prediction": {
-      "name": "goodbye",
-      "confidence": 8.213998808059841e-05
-    }
-  },
-  {
-    "text": "can u tell me if there is a game store in this shopping mall?",
-    "intent": "nlu_fallback",
-    "intent_prediction": {
-      "name": "goodbye",
-      "confidence": 0.00017059242236427963
+      "name": "affirm",
+      "confidence": 0.026481347158551216
     }
   },
   {
     "text": "how many cats are there?",
     "intent": "nlu_fallback",
     "intent_prediction": {
-      "name": "stop",
-      "confidence": 0.0001907663099700585
+      "name": "count_people",
+      "confidence": 0.9693318009376526
+    }
+  },
+  {
+    "text": "indeed",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "count_people",
+      "confidence": 0.2985014319419861
+    }
+  },
+  {
+    "text": "i don't know",
+    "intent": "doubt",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.9134364724159241
+    }
+  },
+  {
+    "text": "Do you know where is the bar?",
+    "intent": "nlu_fallback",
+    "intent_prediction": {
+      "name": "capabilities",
+      "confidence": 0.003444886300712824
     }
   },
   {
     "text": "how many dogs are there?",
     "intent": "nlu_fallback",
     "intent_prediction": {
-      "name": "stop",
-      "confidence": 0.00021137829753570259
+      "name": "count_people",
+      "confidence": 0.0906633734703064
+    }
+  },
+  {
+    "text": "let's go",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.7143355011940002
+    }
+  },
+  {
+    "text": "Farewell, Pepper!",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.8879152536392212
+    }
+  },
+  {
+    "text": "I think so",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.9940882921218872
+    }
+  },
+  {
+    "text": "orange",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "finding_someone",
+      "confidence": 0.9141448140144348
+    }
+  },
+  {
+    "text": "yellow",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.8826613426208496
+    }
+  },
+  {
+    "text": "Do you know where is the supermarket?",
+    "intent": "nlu_fallback",
+    "intent_prediction": {
+      "name": "doubt",
+      "confidence": 0.00256046443246305
+    }
+  },
+  {
+    "text": "Do you know if there are restaurant in the shopping mall?",
+    "intent": "nlu_fallback",
+    "intent_prediction": {
+      "name": "doubt",
+      "confidence": 0.0009389078477397561
+    }
+  },
+  {
+    "text": "pepper, my buddy!",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "finding_someone",
+      "confidence": 0.728158712387085
+    }
+  },
+  {
+    "text": "Sayonara!",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "inform",
+      "confidence": 0.20639930665493011
+    }
+  },
+  {
+    "text": "I don't think so",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.8845567107200623
+    }
+  },
+  {
+    "text": "boh",
+    "intent": "doubt",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.288803368806839
+    }
+  },
+  {
+    "text": "Now I remember. She is carrying a rucksack.",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "finding_someone",
+      "confidence": 0.6168141961097717
+    }
+  },
+  {
+    "text": "purple",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "count_people",
+      "confidence": 0.9454442262649536
+    }
+  },
+  {
+    "text": "Can you tell me what is the capital of Italy?",
+    "intent": "nlu_fallback",
+    "intent_prediction": {
+      "name": "count_people",
+      "confidence": 0.9760002493858337
+    }
+  },
+  {
+    "text": "can u tell me if there is a game store in this shopping mall?",
+    "intent": "nlu_fallback",
+    "intent_prediction": {
+      "name": "count_people",
+      "confidence": 0.005005565471947193
+    }
+  },
+  {
+    "text": "moin",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.6024011969566345
+    }
+  },
+  {
+    "text": "good afternoon",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.42056676745414734
+    }
+  },
+  {
+    "text": "So long, Pepper! I appreciate your assistance.",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "finding_someone",
+      "confidence": 0.9178763628005981
+    }
+  },
+  {
+    "text": "can you assist me?",
+    "intent": "capabilities",
+    "intent_prediction": {
+      "name": "finding_someone",
+      "confidence": 0.8275144100189209
+    }
+  },
+  {
+    "text": "brown",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "finding_someone",
+      "confidence": 0.5477946996688843
+    }
+  },
+  {
+    "text": "how many animals are currently in the shopping mall?",
+    "intent": "nlu_fallback",
+    "intent_prediction": {
+      "name": "count_people",
+      "confidence": 0.9501750469207764
     }
   },
   {
     "text": "Do you know where I can buy a new red shirt?",
     "intent": "nlu_fallback",
     "intent_prediction": {
-      "name": "stop",
-      "confidence": 0.00021185909281484783
+      "name": "inform",
+      "confidence": 0.19210419058799744
     }
   }
 ]

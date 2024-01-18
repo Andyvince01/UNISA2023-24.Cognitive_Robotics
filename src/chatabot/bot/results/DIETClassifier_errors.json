@@ -1,0 +1,2447 @@
+[
+  {
+    "text": "of course",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "clothing",
+        "start": 3,
+        "end": 9,
+        "confidence_entity": 0.6695508360862732,
+        "value": "course",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "count the number of people who have passed in front of the toy store once.",
+    "entities": [
+      {
+        "start": 59,
+        "end": 68,
+        "value": "toy store",
+        "entity": "place"
+      },
+      {
+        "start": 69,
+        "end": 73,
+        "value": "once",
+        "entity": "passages"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "negation",
+        "start": 59,
+        "end": 68,
+        "confidence_entity": 0.6104792356491089,
+        "value": "toy store",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "passages",
+        "start": 69,
+        "end": 73,
+        "confidence_entity": 0.7962393760681152,
+        "value": "once",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I have lost my mum, can you see her?",
+    "entities": [
+      {
+        "start": 15,
+        "end": 18,
+        "value": "female",
+        "entity": "gender"
+      },
+      {
+        "start": 32,
+        "end": 35,
+        "value": "female",
+        "entity": "gender"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "gender",
+        "start": 32,
+        "end": 35,
+        "confidence_entity": 0.9975864887237549,
+        "value": "female",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Can you tell me how many people are dressed in green leggings?",
+    "entities": [
+      {
+        "start": 47,
+        "end": 52,
+        "value": "green",
+        "entity": "color"
+      },
+      {
+        "start": 53,
+        "end": 61,
+        "value": "trouser",
+        "entity": "clothing"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "color",
+        "start": 47,
+        "end": 52,
+        "confidence_entity": 0.9995759129524231,
+        "value": "green",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "could you tell me the amount of people that haven't walked past the music store at least one hundred and eleven times?",
+    "entities": [
+      {
+        "start": 44,
+        "end": 51,
+        "value": "haven't",
+        "entity": "negation"
+      },
+      {
+        "start": 68,
+        "end": 79,
+        "value": "music store",
+        "entity": "place"
+      },
+      {
+        "start": 89,
+        "end": 117,
+        "value": "one hundred and eleven times",
+        "entity": "passages"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "negation",
+        "start": 44,
+        "end": 51,
+        "confidence_entity": 0.9983745813369751,
+        "value": "haven't",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "gender",
+        "start": 68,
+        "end": 79,
+        "confidence_entity": 0.5326435565948486,
+        "value": "music store",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "passages",
+        "start": 89,
+        "end": 104,
+        "confidence_entity": 0.6811955571174622,
+        "value": "one hundred and",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "passages",
+        "start": 105,
+        "end": 117,
+        "confidence_entity": 0.996956467628479,
+        "value": "eleven times",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "how many women have walked in front of the jewelry store twenty-three times and stayed for at least forty-seven seconds?",
+    "entities": [
+      {
+        "start": 9,
+        "end": 14,
+        "value": "female",
+        "entity": "gender"
+      },
+      {
+        "start": 43,
+        "end": 56,
+        "value": "jewelry store",
+        "entity": "place"
+      },
+      {
+        "start": 57,
+        "end": 75,
+        "value": "twenty-three times",
+        "entity": "passages"
+      },
+      {
+        "start": 100,
+        "end": 119,
+        "value": "forty-seven seconds",
+        "entity": "duration"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "gender",
+        "start": 9,
+        "end": 14,
+        "confidence_entity": 0.9992351531982422,
+        "value": "female",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "place",
+        "start": 51,
+        "end": 56,
+        "confidence_entity": 0.9952874183654785,
+        "value": "store",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "passages",
+        "start": 57,
+        "end": 75,
+        "confidence_entity": 0.67,
+        "value": "twenty-three times",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "duration",
+        "start": 100,
+        "end": 119,
+        "confidence_entity": 0.9945765733718872,
+        "value": "forty-seven seconds",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "can u tell me the amount of people that have not walked by the magic store ninety-one times and not thirty-one minutes?",
+    "entities": [
+      {
+        "start": 45,
+        "end": 48,
+        "value": "not",
+        "entity": "negation"
+      },
+      {
+        "start": 63,
+        "end": 74,
+        "value": "magic store",
+        "entity": "place"
+      },
+      {
+        "start": 75,
+        "end": 91,
+        "value": "ninety-one times",
+        "entity": "passages"
+      },
+      {
+        "start": 96,
+        "end": 99,
+        "value": "not",
+        "entity": "negation"
+      },
+      {
+        "start": 100,
+        "end": 118,
+        "value": "thirty-one minutes",
+        "entity": "duration"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "negation",
+        "start": 45,
+        "end": 48,
+        "confidence_entity": 0.9995198249816895,
+        "value": "not",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "place",
+        "start": 69,
+        "end": 74,
+        "confidence_entity": 0.994979202747345,
+        "value": "store",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "passages",
+        "start": 75,
+        "end": 91,
+        "confidence_entity": 0.9961904287338257,
+        "value": "ninety-one times",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "negation",
+        "start": 96,
+        "end": 99,
+        "confidence_entity": 0.9993991851806641,
+        "value": "not",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "duration",
+        "start": 100,
+        "end": 118,
+        "confidence_entity": 0.67,
+        "value": "thirty-one minutes",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "While I'm waiting, could u telle me how many people are wearing a white shirt and that aren't wearing a visor?",
+    "entities": [
+      {
+        "start": 66,
+        "end": 71,
+        "value": "white",
+        "entity": "color"
+      },
+      {
+        "start": 72,
+        "end": 77,
+        "value": "top",
+        "entity": "clothing"
+      },
+      {
+        "start": 87,
+        "end": 93,
+        "value": "aren't",
+        "entity": "negation"
+      },
+      {
+        "start": 104,
+        "end": 109,
+        "value": "hat",
+        "entity": "clothing"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "color",
+        "start": 0,
+        "end": 5,
+        "confidence_entity": 0.5737565159797668,
+        "value": "While",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "color",
+        "start": 66,
+        "end": 71,
+        "confidence_entity": 0.9995477795600891,
+        "value": "white",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "clothing",
+        "start": 72,
+        "end": 77,
+        "confidence_entity": 0.9994626641273499,
+        "value": "top",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "negation",
+        "start": 87,
+        "end": 93,
+        "confidence_entity": 0.9905568361282349,
+        "value": "aren't",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "clothing",
+        "start": 104,
+        "end": 109,
+        "confidence_entity": 0.9996534585952759,
+        "value": "hat",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Can you assist me in locating a colleague? I can't seem to find him.",
+    "entities": [
+      {
+        "start": 64,
+        "end": 67,
+        "value": "male",
+        "entity": "gender"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "negation",
+        "start": 49,
+        "end": 50,
+        "confidence_entity": 0.8980169296264648,
+        "value": "t",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "gender",
+        "start": 64,
+        "end": 67,
+        "confidence_entity": 0.9993996620178223,
+        "value": "male",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Hi Pepper. I lost my child. He is a boy with a white hoodie and the fedora.",
+    "entities": [
+      {
+        "start": 28,
+        "end": 30,
+        "value": "male",
+        "entity": "gender"
+      },
+      {
+        "start": 36,
+        "end": 39,
+        "value": "male",
+        "entity": "gender"
+      },
+      {
+        "start": 47,
+        "end": 52,
+        "value": "white",
+        "entity": "color"
+      },
+      {
+        "start": 53,
+        "end": 59,
+        "value": "top",
+        "entity": "clothing"
+      },
+      {
+        "start": 68,
+        "end": 74,
+        "value": "hat",
+        "entity": "clothing"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "gender",
+        "start": 28,
+        "end": 30,
+        "confidence_entity": 0.9997305274009705,
+        "value": "male",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "gender",
+        "start": 36,
+        "end": 39,
+        "confidence_entity": 0.9971956014633179,
+        "value": "male",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "color",
+        "start": 47,
+        "end": 52,
+        "confidence_entity": 0.9997387528419495,
+        "value": "white",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "clothing",
+        "start": 53,
+        "end": 59,
+        "confidence_entity": 0.9997573494911194,
+        "value": "top",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Can you help me find my grandpa? He has on a purple vest and he doesn't wear a fedora.",
+    "entities": [
+      {
+        "start": 24,
+        "end": 31,
+        "value": "male",
+        "entity": "gender"
+      },
+      {
+        "start": 33,
+        "end": 35,
+        "value": "male",
+        "entity": "gender"
+      },
+      {
+        "start": 45,
+        "end": 51,
+        "value": "purple",
+        "entity": "color"
+      },
+      {
+        "start": 52,
+        "end": 56,
+        "value": "top",
+        "entity": "clothing"
+      },
+      {
+        "start": 61,
+        "end": 63,
+        "value": "male",
+        "entity": "gender"
+      },
+      {
+        "start": 64,
+        "end": 71,
+        "value": "doesn't",
+        "entity": "negation"
+      },
+      {
+        "start": 79,
+        "end": 85,
+        "value": "hat",
+        "entity": "clothing"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "gender",
+        "start": 24,
+        "end": 31,
+        "confidence_entity": 0.8631552457809448,
+        "value": "male",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "gender",
+        "start": 33,
+        "end": 35,
+        "confidence_entity": 0.9996722936630249,
+        "value": "male",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "color",
+        "start": 45,
+        "end": 51,
+        "confidence_entity": 0.9996603727340698,
+        "value": "purple",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "clothing",
+        "start": 52,
+        "end": 56,
+        "confidence_entity": 0.9997616410255432,
+        "value": "top",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "gender",
+        "start": 61,
+        "end": 63,
+        "confidence_entity": 0.9986794590950012,
+        "value": "male",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "negation",
+        "start": 64,
+        "end": 71,
+        "confidence_entity": 0.9982312321662903,
+        "value": "doesn't",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "My friend is missing. She was last seen in a white jumper and doesn't carry a satchel.",
+    "entities": [
+      {
+        "start": 22,
+        "end": 25,
+        "value": "female",
+        "entity": "gender"
+      },
+      {
+        "start": 45,
+        "end": 50,
+        "value": "white",
+        "entity": "color"
+      },
+      {
+        "start": 51,
+        "end": 57,
+        "value": "top",
+        "entity": "clothing"
+      },
+      {
+        "start": 62,
+        "end": 69,
+        "value": "doesn't",
+        "entity": "negation"
+      },
+      {
+        "start": 78,
+        "end": 85,
+        "value": "bag",
+        "entity": "clothing"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "gender",
+        "start": 22,
+        "end": 25,
+        "confidence_entity": 0.9997735619544983,
+        "value": "female",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "color",
+        "start": 45,
+        "end": 50,
+        "confidence_entity": 0.9997676014900208,
+        "value": "white",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "negation",
+        "start": 62,
+        "end": 69,
+        "confidence_entity": 0.9906778335571289,
+        "value": "doesn't",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "I can't find my uncle. He is dressed in a gray suit and he isn't wearing a beanie.",
+    "entities": [
+      {
+        "start": 16,
+        "end": 21,
+        "value": "male",
+        "entity": "gender"
+      },
+      {
+        "start": 23,
+        "end": 25,
+        "value": "male",
+        "entity": "gender"
+      },
+      {
+        "start": 42,
+        "end": 46,
+        "value": "gray",
+        "entity": "color"
+      },
+      {
+        "start": 47,
+        "end": 51,
+        "value": "top",
+        "entity": "clothing"
+      },
+      {
+        "start": 56,
+        "end": 58,
+        "value": "male",
+        "entity": "gender"
+      },
+      {
+        "start": 59,
+        "end": 64,
+        "value": "isn't",
+        "entity": "negation"
+      },
+      {
+        "start": 75,
+        "end": 81,
+        "value": "hat",
+        "entity": "clothing"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "negation",
+        "start": 6,
+        "end": 7,
+        "confidence_entity": 0.9843813180923462,
+        "value": "t",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "gender",
+        "start": 16,
+        "end": 21,
+        "confidence_entity": 0.9991083741188049,
+        "value": "male",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "gender",
+        "start": 23,
+        "end": 25,
+        "confidence_entity": 0.999715268611908,
+        "value": "male",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "color",
+        "start": 42,
+        "end": 46,
+        "confidence_entity": 0.9996585845947266,
+        "value": "gray",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "clothing",
+        "start": 47,
+        "end": 51,
+        "confidence_entity": 0.9991772770881653,
+        "value": "top",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "gender",
+        "start": 56,
+        "end": 58,
+        "confidence_entity": 0.998897910118103,
+        "value": "male",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "negation",
+        "start": 59,
+        "end": 64,
+        "confidence_entity": 0.9975014328956604,
+        "value": "isn't",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "clothing",
+        "start": 75,
+        "end": 81,
+        "confidence_entity": 0.9998264908790588,
+        "value": "hat",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Is there at least one person wearing blue culottes today?",
+    "entities": [
+      {
+        "start": 37,
+        "end": 41,
+        "value": "blue",
+        "entity": "color"
+      },
+      {
+        "start": 42,
+        "end": 50,
+        "value": "trouser",
+        "entity": "clothing"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "color",
+        "start": 37,
+        "end": 41,
+        "confidence_entity": 0.9996824264526367,
+        "value": "blue",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "How many guys are currently wearing red jeans but not carrying a snapback?",
+    "entities": [
+      {
+        "start": 36,
+        "end": 39,
+        "value": "red",
+        "entity": "color"
+      },
+      {
+        "start": 40,
+        "end": 45,
+        "value": "trouser",
+        "entity": "clothing"
+      },
+      {
+        "start": 50,
+        "end": 53,
+        "value": "not",
+        "entity": "negation"
+      },
+      {
+        "start": 65,
+        "end": 73,
+        "value": "hat",
+        "entity": "clothing"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "gender",
+        "start": 9,
+        "end": 13,
+        "confidence_entity": 0.9993332028388977,
+        "value": "male",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "color",
+        "start": 36,
+        "end": 39,
+        "confidence_entity": 0.9980354905128479,
+        "value": "red",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "clothing",
+        "start": 40,
+        "end": 45,
+        "confidence_entity": 0.9997395873069763,
+        "value": "trouser",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "negation",
+        "start": 50,
+        "end": 53,
+        "confidence_entity": 0.9992979764938354,
+        "value": "not",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "clothing",
+        "start": 65,
+        "end": 73,
+        "confidence_entity": 0.9994503855705261,
+        "value": "hat",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Can u tell me if there are some boys in the bar that [aren't] carrying a snapback?",
+    "entities": [
+      {
+        "start": 32,
+        "end": 36,
+        "value": "male",
+        "entity": "gender"
+      },
+      {
+        "start": 44,
+        "end": 47,
+        "value": "bar",
+        "entity": "place"
+      },
+      {
+        "start": 73,
+        "end": 81,
+        "value": "hat",
+        "entity": "clothing"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "gender",
+        "start": 32,
+        "end": 36,
+        "confidence_entity": 0.9993963241577148,
+        "value": "male",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "place",
+        "start": 44,
+        "end": 47,
+        "confidence_entity": 0.9958488941192627,
+        "value": "bar",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "negation",
+        "start": 54,
+        "end": 60,
+        "confidence_entity": 0.9990522265434265,
+        "value": "aren't",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "clothing",
+        "start": 73,
+        "end": 81,
+        "confidence_entity": 0.9994586110115051,
+        "value": "hat",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "how many people have not walked by the tobacco shop eleven times?",
+    "entities": [
+      {
+        "start": 21,
+        "end": 24,
+        "value": "not",
+        "entity": "negation"
+      },
+      {
+        "start": 39,
+        "end": 51,
+        "value": "tobacco shop",
+        "entity": "place"
+      },
+      {
+        "start": 52,
+        "end": 64,
+        "value": "eleven times",
+        "entity": "passages"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "negation",
+        "start": 21,
+        "end": 24,
+        "confidence_entity": 0.9994964599609375,
+        "value": "not",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "place",
+        "start": 47,
+        "end": 64,
+        "confidence_entity": 0.5763915777206421,
+        "value": "shop eleven times",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "could u tell me how many people haven't passed in front of the toilet for forty-eight seconds?",
+    "entities": [
+      {
+        "start": 32,
+        "end": 39,
+        "value": "haven't",
+        "entity": "negation"
+      },
+      {
+        "start": 63,
+        "end": 69,
+        "value": "toilet",
+        "entity": "place"
+      },
+      {
+        "start": 74,
+        "end": 93,
+        "value": "forty-eight seconds",
+        "entity": "duration"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "negation",
+        "start": 32,
+        "end": 39,
+        "confidence_entity": 0.9992117881774902,
+        "value": "haven't",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "negation",
+        "start": 63,
+        "end": 69,
+        "confidence_entity": 0.6975235939025879,
+        "value": "toilet",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "duration",
+        "start": 74,
+        "end": 93,
+        "confidence_entity": 0.9861078858375549,
+        "value": "forty-eight seconds",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Could you help me locate my mother? She wasn't wearing a cap when I lost her in the crowd.",
+    "entities": [
+      {
+        "start": 28,
+        "end": 34,
+        "value": "female",
+        "entity": "gender"
+      },
+      {
+        "start": 36,
+        "end": 39,
+        "value": "female",
+        "entity": "gender"
+      },
+      {
+        "start": 40,
+        "end": 46,
+        "value": "wasn't",
+        "entity": "negation"
+      },
+      {
+        "start": 57,
+        "end": 60,
+        "value": "hat",
+        "entity": "clothing"
+      },
+      {
+        "start": 73,
+        "end": 76,
+        "value": "female",
+        "entity": "gender"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "gender",
+        "start": 28,
+        "end": 34,
+        "confidence_entity": 0.998658299446106,
+        "value": "female",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "gender",
+        "start": 36,
+        "end": 39,
+        "confidence_entity": 0.9997797608375549,
+        "value": "female",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "negation",
+        "start": 45,
+        "end": 46,
+        "confidence_entity": 0.978432297706604,
+        "value": "t",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "clothing",
+        "start": 57,
+        "end": 60,
+        "confidence_entity": 0.9997538924217224,
+        "value": "hat",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "gender",
+        "start": 73,
+        "end": 76,
+        "confidence_entity": 0.9994465708732605,
+        "value": "female",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "I'm searching for my nephew. He has on a green sweatshirt and a visor.",
+    "entities": [
+      {
+        "start": 21,
+        "end": 27,
+        "value": "male",
+        "entity": "gender"
+      },
+      {
+        "start": 29,
+        "end": 31,
+        "value": "male",
+        "entity": "gender"
+      },
+      {
+        "start": 41,
+        "end": 46,
+        "value": "green",
+        "entity": "color"
+      },
+      {
+        "start": 47,
+        "end": 57,
+        "value": "top",
+        "entity": "clothing"
+      },
+      {
+        "start": 64,
+        "end": 69,
+        "value": "hat",
+        "entity": "clothing"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "gender",
+        "start": 29,
+        "end": 31,
+        "confidence_entity": 0.9997621178627014,
+        "value": "male",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "color",
+        "start": 41,
+        "end": 46,
+        "confidence_entity": 0.9997088313102722,
+        "value": "green",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "clothing",
+        "start": 47,
+        "end": 57,
+        "confidence_entity": 0.9996228218078613,
+        "value": "top",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "clothing",
+        "start": 64,
+        "end": 69,
+        "confidence_entity": 0.9998218417167664,
+        "value": "hat",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Please, can you help find my nephew? He is in a black hoodie and he doesn't wear a cap.",
+    "entities": [
+      {
+        "start": 29,
+        "end": 35,
+        "value": "male",
+        "entity": "gender"
+      },
+      {
+        "start": 37,
+        "end": 39,
+        "value": "male",
+        "entity": "gender"
+      },
+      {
+        "start": 48,
+        "end": 53,
+        "value": "black",
+        "entity": "color"
+      },
+      {
+        "start": 54,
+        "end": 60,
+        "value": "top",
+        "entity": "clothing"
+      },
+      {
+        "start": 65,
+        "end": 67,
+        "value": "male",
+        "entity": "gender"
+      },
+      {
+        "start": 68,
+        "end": 75,
+        "value": "doesn't",
+        "entity": "negation"
+      },
+      {
+        "start": 83,
+        "end": 86,
+        "value": "hat",
+        "entity": "clothing"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "gender",
+        "start": 37,
+        "end": 39,
+        "confidence_entity": 0.9997172951698303,
+        "value": "male",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "color",
+        "start": 48,
+        "end": 53,
+        "confidence_entity": 0.9995632767677307,
+        "value": "black",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "clothing",
+        "start": 54,
+        "end": 60,
+        "confidence_entity": 0.9998639822006226,
+        "value": "top",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "gender",
+        "start": 65,
+        "end": 67,
+        "confidence_entity": 0.9997007846832275,
+        "value": "male",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "negation",
+        "start": 68,
+        "end": 75,
+        "confidence_entity": 0.9993765950202942,
+        "value": "doesn't",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "clothing",
+        "start": 83,
+        "end": 86,
+        "confidence_entity": 0.9997031092643738,
+        "value": "hat",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "grey",
+    "entities": [
+      {
+        "start": 0,
+        "end": 4,
+        "value": "grey",
+        "entity": "color"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Do you know where is the supermarket?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "place",
+        "start": 25,
+        "end": 36,
+        "confidence_entity": 0.9971035122871399,
+        "value": "supermarket",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Do you know if there are restaurant in the shopping mall?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "place",
+        "start": 25,
+        "end": 35,
+        "confidence_entity": 0.9903659820556641,
+        "value": "restaurant",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Don't worry. I found him. He just called me.",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "gender",
+        "start": 21,
+        "end": 24,
+        "confidence_entity": 0.5704498291015625,
+        "value": "male",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "How many people are wearing pink top and gray slacks?",
+    "entities": [
+      {
+        "start": 28,
+        "end": 32,
+        "value": "pink",
+        "entity": "color"
+      },
+      {
+        "start": 33,
+        "end": 36,
+        "value": "top",
+        "entity": "clothing"
+      },
+      {
+        "start": 41,
+        "end": 45,
+        "value": "gray",
+        "entity": "color"
+      },
+      {
+        "start": 46,
+        "end": 52,
+        "value": "trouser",
+        "entity": "clothing"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "color",
+        "start": 28,
+        "end": 36,
+        "confidence_entity": 0.9392727017402649,
+        "value": "pink top",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "color",
+        "start": 41,
+        "end": 45,
+        "confidence_entity": 0.9996938705444336,
+        "value": "gray",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "clothing",
+        "start": 46,
+        "end": 52,
+        "confidence_entity": 0.9994988441467285,
+        "value": "trouser",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "How many individuals are wearing blue jeans but not carrying sombrero?",
+    "entities": [
+      {
+        "start": 33,
+        "end": 37,
+        "value": "blue",
+        "entity": "color"
+      },
+      {
+        "start": 38,
+        "end": 43,
+        "value": "trouser",
+        "entity": "clothing"
+      },
+      {
+        "start": 48,
+        "end": 51,
+        "value": "not",
+        "entity": "negation"
+      },
+      {
+        "start": 61,
+        "end": 69,
+        "value": "hat",
+        "entity": "clothing"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "color",
+        "start": 33,
+        "end": 37,
+        "confidence_entity": 0.9996651411056519,
+        "value": "blue",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "clothing",
+        "start": 38,
+        "end": 43,
+        "confidence_entity": 0.9997666478157043,
+        "value": "trouser",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "negation",
+        "start": 48,
+        "end": 51,
+        "confidence_entity": 0.9996058344841003,
+        "value": "not",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "how many boys haven't walked in front of the restaurant twice and for more than six seconds?",
+    "entities": [
+      {
+        "start": 9,
+        "end": 13,
+        "value": "male",
+        "entity": "gender"
+      },
+      {
+        "start": 14,
+        "end": 21,
+        "value": "haven't",
+        "entity": "negation"
+      },
+      {
+        "start": 45,
+        "end": 55,
+        "value": "restaurant",
+        "entity": "place"
+      },
+      {
+        "start": 56,
+        "end": 61,
+        "value": "twice",
+        "entity": "passages"
+      },
+      {
+        "start": 80,
+        "end": 91,
+        "value": "six seconds",
+        "entity": "duration"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "gender",
+        "start": 9,
+        "end": 13,
+        "confidence_entity": 0.9996761083602905,
+        "value": "male",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "negation",
+        "start": 14,
+        "end": 21,
+        "confidence_entity": 0.9981695413589478,
+        "value": "haven't",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "passages",
+        "start": 56,
+        "end": 61,
+        "confidence_entity": 0.9669394493103027,
+        "value": "twice",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "duration",
+        "start": 80,
+        "end": 91,
+        "confidence_entity": 0.67,
+        "value": "six seconds",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "tell me the number of people who stayed in front of the record store for at least two hours.",
+    "entities": [
+      {
+        "start": 56,
+        "end": 68,
+        "value": "record store",
+        "entity": "place"
+      },
+      {
+        "start": 82,
+        "end": 91,
+        "value": "two hours",
+        "entity": "duration"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "place",
+        "start": 63,
+        "end": 68,
+        "confidence_entity": 0.9990014433860779,
+        "value": "store",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "duration",
+        "start": 82,
+        "end": 85,
+        "confidence_entity": 0.993324339389801,
+        "value": "two",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "clothing",
+        "start": 86,
+        "end": 91,
+        "confidence_entity": 0.9408500790596008,
+        "value": "hours",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "can you telle me the count of people carrying a bag and who have passed in front of the fruit stand at least one hundred and two times?",
+    "entities": [
+      {
+        "start": 48,
+        "end": 51,
+        "value": "bag",
+        "entity": "clothing"
+      },
+      {
+        "start": 88,
+        "end": 99,
+        "value": "fruit stand",
+        "entity": "place"
+      },
+      {
+        "start": 109,
+        "end": 134,
+        "value": "one hundred and two times",
+        "entity": "passages"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "clothing",
+        "start": 48,
+        "end": 51,
+        "confidence_entity": 0.9992616772651672,
+        "value": "bag",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "clothing",
+        "start": 88,
+        "end": 93,
+        "confidence_entity": 0.9961330890655518,
+        "value": "fruit",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "passages",
+        "start": 109,
+        "end": 124,
+        "confidence_entity": 0.6923986077308655,
+        "value": "one hundred and",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "passages",
+        "start": 125,
+        "end": 134,
+        "confidence_entity": 0.67,
+        "value": "two times",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "how many people of male gender are currently wearing a white shirt?",
+    "entities": [
+      {
+        "start": 19,
+        "end": 23,
+        "value": "male",
+        "entity": "gender"
+      },
+      {
+        "start": 55,
+        "end": 60,
+        "value": "white",
+        "entity": "color"
+      },
+      {
+        "start": 61,
+        "end": 66,
+        "value": "top",
+        "entity": "clothing"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "gender",
+        "start": 19,
+        "end": 23,
+        "confidence_entity": 0.9990072846412659,
+        "value": "male",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "color",
+        "start": 24,
+        "end": 30,
+        "confidence_entity": 0.5891514420509338,
+        "value": "gender",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "color",
+        "start": 55,
+        "end": 60,
+        "confidence_entity": 0.999754011631012,
+        "value": "white",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "clothing",
+        "start": 61,
+        "end": 66,
+        "confidence_entity": 0.9978772401809692,
+        "value": "top",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "I've lost track of my uncle. He is wearing a brown blazer but he doesn't wear a bag.",
+    "entities": [
+      {
+        "start": 22,
+        "end": 27,
+        "value": "male",
+        "entity": "gender"
+      },
+      {
+        "start": 29,
+        "end": 31,
+        "value": "male",
+        "entity": "gender"
+      },
+      {
+        "start": 45,
+        "end": 50,
+        "value": "brown",
+        "entity": "color"
+      },
+      {
+        "start": 51,
+        "end": 57,
+        "value": "top",
+        "entity": "clothing"
+      },
+      {
+        "start": 62,
+        "end": 64,
+        "value": "male",
+        "entity": "gender"
+      },
+      {
+        "start": 65,
+        "end": 72,
+        "value": "doesn't",
+        "entity": "negation"
+      },
+      {
+        "start": 80,
+        "end": 83,
+        "value": "bag",
+        "entity": "clothing"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "gender",
+        "start": 22,
+        "end": 27,
+        "confidence_entity": 0.9995443224906921,
+        "value": "male",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "gender",
+        "start": 29,
+        "end": 31,
+        "confidence_entity": 0.9996745586395264,
+        "value": "male",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "color",
+        "start": 45,
+        "end": 50,
+        "confidence_entity": 0.9993512034416199,
+        "value": "brown",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "color",
+        "start": 51,
+        "end": 57,
+        "confidence_entity": 0.9968670010566711,
+        "value": "top",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "gender",
+        "start": 62,
+        "end": 64,
+        "confidence_entity": 0.9990841150283813,
+        "value": "male",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "negation",
+        "start": 65,
+        "end": 72,
+        "confidence_entity": 0.9956132173538208,
+        "value": "doesn't",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "clothing",
+        "start": 80,
+        "end": 83,
+        "confidence_entity": 0.9992641806602478,
+        "value": "bag",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "You misunderstood. She is wearing a yellow (sweater){\"entity\": \"clothing\", \"value\": \"top\"}.",
+    "entities": [
+      {
+        "start": 19,
+        "end": 22,
+        "value": "female",
+        "entity": "gender"
+      },
+      {
+        "start": 36,
+        "end": 42,
+        "value": "yellow",
+        "entity": "color"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "gender",
+        "start": 19,
+        "end": 22,
+        "confidence_entity": 0.9998062252998352,
+        "value": "female",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "color",
+        "start": 36,
+        "end": 42,
+        "confidence_entity": 0.9997023940086365,
+        "value": "yellow",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "clothing",
+        "start": 44,
+        "end": 52,
+        "confidence_entity": 0.9998248219490051,
+        "value": "sweater)",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "color",
+        "start": 76,
+        "end": 81,
+        "confidence_entity": 0.9983620047569275,
+        "value": "value",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "negation",
+        "start": 85,
+        "end": 88,
+        "confidence_entity": 0.3008926510810852,
+        "value": "top",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "You misunderstood. She is wearing yellow (leggings){\"entity\": \"clothing\", \"value\": \"top\"}.",
+    "entities": [
+      {
+        "start": 19,
+        "end": 22,
+        "value": "female",
+        "entity": "gender"
+      },
+      {
+        "start": 34,
+        "end": 40,
+        "value": "yellow",
+        "entity": "color"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "gender",
+        "start": 19,
+        "end": 22,
+        "confidence_entity": 0.9997802376747131,
+        "value": "female",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "color",
+        "start": 34,
+        "end": 40,
+        "confidence_entity": 0.9996732473373413,
+        "value": "yellow",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "clothing",
+        "start": 42,
+        "end": 51,
+        "confidence_entity": 0.9995982050895691,
+        "value": "leggings)",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "color",
+        "start": 75,
+        "end": 80,
+        "confidence_entity": 0.9985388517379761,
+        "value": "value",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "negation",
+        "start": 84,
+        "end": 87,
+        "confidence_entity": 0.358441561460495,
+        "value": "top",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "can u tell me if there is a game store in this shopping mall?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "place",
+        "start": 28,
+        "end": 38,
+        "confidence_entity": 0.9949935078620911,
+        "value": "game store",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "I'm drawing a blank right now",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "color",
+        "start": 14,
+        "end": 19,
+        "confidence_entity": 0.8788883686065674,
+        "value": "blank",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I can no longer find my papa. He doesn't wear a hat but carries a cute handbag.",
+    "entities": [
+      {
+        "start": 24,
+        "end": 28,
+        "value": "male",
+        "entity": "gender"
+      },
+      {
+        "start": 30,
+        "end": 32,
+        "value": "male",
+        "entity": "gender"
+      },
+      {
+        "start": 33,
+        "end": 40,
+        "value": "doesn't",
+        "entity": "negation"
+      },
+      {
+        "start": 48,
+        "end": 51,
+        "value": "hat",
+        "entity": "clothing"
+      },
+      {
+        "start": 71,
+        "end": 78,
+        "value": "bag",
+        "entity": "clothing"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "negation",
+        "start": 6,
+        "end": 8,
+        "confidence_entity": 0.9392359256744385,
+        "value": "no",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "gender",
+        "start": 30,
+        "end": 32,
+        "confidence_entity": 0.9997588992118835,
+        "value": "male",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "negation",
+        "start": 33,
+        "end": 40,
+        "confidence_entity": 0.9848499298095703,
+        "value": "doesn't",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "clothing",
+        "start": 48,
+        "end": 51,
+        "confidence_entity": 0.9999018907546997,
+        "value": "hat",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "duration",
+        "start": 66,
+        "end": 70,
+        "confidence_entity": 0.3201308250427246,
+        "value": "cute",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "clothing",
+        "start": 71,
+        "end": 78,
+        "confidence_entity": 0.9998101592063904,
+        "value": "bag",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "My grandmother is missing. She was last seen in a orange cardigan and a hat.",
+    "entities": [
+      {
+        "start": 3,
+        "end": 14,
+        "value": "female",
+        "entity": "gender"
+      },
+      {
+        "start": 27,
+        "end": 30,
+        "value": "female",
+        "entity": "gender"
+      },
+      {
+        "start": 50,
+        "end": 56,
+        "value": "orange",
+        "entity": "color"
+      },
+      {
+        "start": 57,
+        "end": 65,
+        "value": "top",
+        "entity": "clothing"
+      },
+      {
+        "start": 72,
+        "end": 75,
+        "value": "hat",
+        "entity": "clothing"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "gender",
+        "start": 3,
+        "end": 14,
+        "confidence_entity": 0.9972368478775024,
+        "value": "female",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "gender",
+        "start": 27,
+        "end": 30,
+        "confidence_entity": 0.9998089671134949,
+        "value": "female",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "color",
+        "start": 50,
+        "end": 56,
+        "confidence_entity": 0.9996572732925415,
+        "value": "orange",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "clothing",
+        "start": 72,
+        "end": 75,
+        "confidence_entity": 0.9998656511306763,
+        "value": "hat",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "I'm looking for my grandma. She has on a brown cardigan and isn't carrying a purse.",
+    "entities": [
+      {
+        "start": 19,
+        "end": 26,
+        "value": "female",
+        "entity": "gender"
+      },
+      {
+        "start": 28,
+        "end": 31,
+        "value": "female",
+        "entity": "gender"
+      },
+      {
+        "start": 41,
+        "end": 46,
+        "value": "brown",
+        "entity": "color"
+      },
+      {
+        "start": 47,
+        "end": 55,
+        "value": "top",
+        "entity": "clothing"
+      },
+      {
+        "start": 60,
+        "end": 65,
+        "value": "isn't",
+        "entity": "negation"
+      },
+      {
+        "start": 77,
+        "end": 82,
+        "value": "bag",
+        "entity": "clothing"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "gender",
+        "start": 19,
+        "end": 26,
+        "confidence_entity": 0.9993957281112671,
+        "value": "female",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "gender",
+        "start": 28,
+        "end": 31,
+        "confidence_entity": 0.9998214840888977,
+        "value": "female",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "color",
+        "start": 41,
+        "end": 46,
+        "confidence_entity": 0.9996436834335327,
+        "value": "brown",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "negation",
+        "start": 60,
+        "end": 65,
+        "confidence_entity": 0.9988254904747009,
+        "value": "isn't",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "clothing",
+        "start": 77,
+        "end": 82,
+        "confidence_entity": 0.999823272228241,
+        "value": "bag",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Do you know where I can buy a new red shirt?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "gender",
+        "start": 30,
+        "end": 33,
+        "confidence_entity": 0.5870347619056702,
+        "value": "new",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "color",
+        "start": 34,
+        "end": 37,
+        "confidence_entity": 0.9996194839477539,
+        "value": "red",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "clothing",
+        "start": 38,
+        "end": 43,
+        "confidence_entity": 0.999794065952301,
+        "value": "top",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  }
+]

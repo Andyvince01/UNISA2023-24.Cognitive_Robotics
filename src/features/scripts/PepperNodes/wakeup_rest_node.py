@@ -14,17 +14,17 @@ class WakeUpRestNode:
     and manage its posture accordingly.
 
     Attributes:
-        _session (Session): A session object to communicate with the robot.
-        _motion_proxy (ALMotion): A service for controlling the robot's motion.
-        _posture_proxy (ALRobotPosture): A service for managing the robot's posture.
-        _ba_service (ALBasicAwareness): The basic awareness service of the robot.
+    - _session (Session): A session object to communicate with the robot.
+    - _motion_proxy (ALMotion): A service for controlling the robot's motion.
+    - _posture_proxy (ALRobotPosture): A service for managing the robot's posture.
+    - _ba_service (ALBasicAwareness): The basic awareness service of the robot.
 
     Methods:
-        __init__(self, ip: str, port: int): Initializes the WakeUpRestNode with the robot's IP and port.
-        __call__(self): Starts the ROS node and initializes the wake-up process for the robot.
-        __stand(self, *args: any): Sets the robot to a standard initial posture.
-        __rest(self, *args: any): Transitions the robot to a rest state and disables motion.
-        __wakeup(self, *args: any): Activates the robot from its rest state and sets it to an initial posture.
+    - __init__(self, ip: str, port: int): Initializes the WakeUpRestNode with the robot's IP and port.
+    - __call__(self): Starts the ROS node and initializes the wake-up process for the robot.
+    - __stand(self, *args: any): Sets the robot to a standard initial posture.
+    - __rest(self, *args: any): Transitions the robot to a rest state and disables motion.
+    - __wakeup(self, *args: any): Activates the robot from its rest state and sets it to an initial posture.
     '''
     
     def __init__(self, ip : str, port : int) -> None:
@@ -33,8 +33,8 @@ class WakeUpRestNode:
         for motion control, posture management, and basic awareness.
 
         Args:
-            ip (str): The IP address of the robot.
-            port (int): The port number for the connection.
+        - ip (str): The IP address of the robot.
+        - port (int): The port number for the connection.
         '''
         self._session = Session(ip, port)
         self._motion_proxy = self._session.get_service("ALMotion")
@@ -59,7 +59,7 @@ class WakeUpRestNode:
         standard posture after waking up.
 
         Args:
-            args: Additional arguments (not used in this implementation).
+        - args: Additional arguments (not used in this implementation).
         '''
         self._posture_proxy.goToPosture("StandInit", 0.5)
     
@@ -69,10 +69,10 @@ class WakeUpRestNode:
         is in a safe, inactive state. In case of an exception, it resets the motion service and retries.
 
         Args:
-            args: Additional arguments (not used in this implementation).
+        - args: Additional arguments (not used in this implementation).
 
         Returns:
-            RestResponse: A response message indicating the robot is in a rest state.
+        - RestResponse: A response message indicating the robot is in a rest state.
         '''
         try:
             self._ba_service.setEnabled(False)
@@ -89,10 +89,10 @@ class WakeUpRestNode:
         its initial posture. In case of an exception, it resets the necessary services and retries the wake-up process.
 
         Args:
-            args: Additional arguments (not used in this implementation).
+        - args: Additional arguments (not used in this implementation).
 
         Returns:
-            WakeUpResponse: A response message indicating the robot has been woken up.
+        - WakeUpResponse: A response message indicating the robot has been woken up.
         '''
         try:
             self._motion_proxy.wakeUp()

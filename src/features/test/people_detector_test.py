@@ -12,7 +12,7 @@ PEOPLE_PROTO = os.path.join(script_dir, "../scripts/Detector/PeopleDetectorModel
 PEOPLE_MODEL = os.path.join(script_dir, "../scripts/Detector/PeopleDetectorModels/MobileNet", "MobileNetSSD_deploy.caffemodel")
 POEPLE_SCORE_THREHSOLD = 0.5
 
-VIDEOS_PATH = os.path.join(script_dir, "TestSet/V*")
+VIDEOS_PATH = os.path.join(script_dir, "TestSet/TestVideo*")
 DIR_LIST = [path for path in glob.glob(os.path.join(VIDEOS_PATH,"**"), recursive=True) if os.path.isdir(path)]
 # VIDEOS_LIST = [path for path in os.listdir(VIDEOS_PATH) if path.endswith(".mp4")]
 FRAMES_LIST = [path for dir_video in DIR_LIST for path in glob.glob(os.path.join(dir_video,"**"), recursive=True) if os.path.isfile(path)]
@@ -65,8 +65,6 @@ class PeopleDetectorTest():
       for frame in FRAMES_LIST:
          img = cv2.imread(os.path.join(frame))
          self.__handle_detector(img)
-      
-      print(self._predictions)
       
       precision, recall, f1_score = self.__calculate_metrics()
       print(f"Precision = {precision} | Recall = {recall} | f1_score = {f1_score}")

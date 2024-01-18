@@ -6,7 +6,8 @@ class ServiceHandler:
         Initialize the ServiceHandler class.
 
         Attributes:
-            _services (dict): Dictionary to store persistent service connections.
+            - _services (dict): Dictionary to store service connections.
+            - _persistent_services (dict): Dictionary to store persistent service connections.
         """
         self._services = {}
         self._persistent_services = {}
@@ -16,8 +17,8 @@ class ServiceHandler:
         Initialize a service connection.
 
         Args:
-            service_name (str): The name of the ROS service.
-            persistent (bool): Whether to use a persistent connection (default: False).
+            - service_name (str): The name of the ROS service.
+            - persistent (bool): Whether to use a persistent connection (default: False).
             
         Nb. Persistent connections should be used carefully. They greatly improve performance for repeated requests, 
         but they also make your client more fragile to service failures. Clients using persistent connections should 
@@ -44,8 +45,8 @@ class ServiceHandler:
         Call a service with the provided arguments.
 
         Args:
-            service_name (str): The name of the ROS service.
-            *args: Variable number of arguments to pass to the service.
+            - service_name (str): The name of the ROS service.
+            - *args: Variable number of arguments to pass to the service.
 
         Returns:
             None
