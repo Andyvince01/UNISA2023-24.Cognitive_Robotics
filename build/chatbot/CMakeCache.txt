@@ -392,7 +392,7 @@ catkin_DIR:PATH=/opt/ros/noetic/share/catkin/cmake
 chatbot_BINARY_DIR:STATIC=/home/andyvince01/Desktop/Project/build/chatbot
 
 //Value Computed by CMake
-chatbot_SOURCE_DIR:STATIC=/home/andyvince01/Desktop/Project/src/chatabot
+chatbot_SOURCE_DIR:STATIC=/home/andyvince01/Desktop/Project/src/chatbot
 
 //The directory containing a CMake configuration file for cpp_common.
 cpp_common_DIR:PATH=/opt/ros/noetic/share/cpp_common/cmake
@@ -584,7 +584,7 @@ CMAKE_HAVE_PTHREAD_CREATE:INTERNAL=1
 CMAKE_HAVE_PTHREAD_H:INTERNAL=1
 //Source directory with the top level CMakeLists.txt file for this
 // project
-CMAKE_HOME_DIRECTORY:INTERNAL=/home/andyvince01/Desktop/Project/src/chatabot
+CMAKE_HOME_DIRECTORY:INTERNAL=/home/andyvince01/Desktop/Project/src/chatbot
 //ADVANCED property for variable: CMAKE_INSTALL_BINDIR
 CMAKE_INSTALL_BINDIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_INSTALL_DATADIR

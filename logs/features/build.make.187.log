@@ -1,0 +1,36 @@
+[35m[1mScanning dependencies of target _features_generate_messages_check_deps_Text2Speech[0m
+[35m[1mScanning dependencies of target _features_generate_messages_check_deps_ASRService[0m
+[35m[1mScanning dependencies of target _features_generate_messages_check_deps_TabletService[0m
+[35m[1mScanning dependencies of target _features_generate_messages_check_deps_Rest[0m
+[35m[1mScanning dependencies of target _features_generate_messages_check_deps_WakeUp[0m
+[35m[1mScanning dependencies of target std_msgs_generate_messages_lisp[0m
+[35m[1mScanning dependencies of target _features_generate_messages_check_deps_VoiceDetectionService[0m
+[35m[1mScanning dependencies of target _features_generate_messages_check_deps_AnimationService[0m
+[  0%] Built target std_msgs_generate_messages_lisp
+[35m[1mScanning dependencies of target std_msgs_generate_messages_py[0m
+[  0%] Built target _features_generate_messages_check_deps_ASRService
+[  0%] Built target _features_generate_messages_check_deps_WakeUp
+[  0%] Built target _features_generate_messages_check_deps_Rest
+[  0%] Built target std_msgs_generate_messages_py
+[  0%] Built target _features_generate_messages_check_deps_Text2Speech
+[35m[1mScanning dependencies of target std_msgs_generate_messages_nodejs[0m
+[35m[1mScanning dependencies of target std_msgs_generate_messages_eus[0m
+[35m[1mScanning dependencies of target std_msgs_generate_messages_cpp[0m
+[  0%] Built target _features_generate_messages_check_deps_AnimationService
+[  0%] Built target _features_generate_messages_check_deps_TabletService
+[  0%] Built target std_msgs_generate_messages_nodejs
+[  0%] Built target _features_generate_messages_check_deps_VoiceDetectionService
+[  0%] Built target std_msgs_generate_messages_cpp
+[  0%] Built target std_msgs_generate_messages_eus
+[35m[1mScanning dependencies of target features_generate_messages_lisp[0m
+[35m[1mScanning dependencies of target features_generate_messages_cpp[0m
+[35m[1mScanning dependencies of target features_generate_messages_py[0m
+[35m[1mScanning dependencies of target features_generate_messages_nodejs[0m
+[35m[1mScanning dependencies of target features_generate_messages_eus[0m
+[ 32%] Built target features_generate_messages_nodejs
+[ 40%] Built target features_generate_messages_py
+[ 59%] Built target features_generate_messages_lisp
+[ 78%] Built target features_generate_messages_cpp
+[100%] Built target features_generate_messages_eus
+[35m[1mScanning dependencies of target features_generate_messages[0m
+[100%] Built target features_generate_messages

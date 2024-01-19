@@ -13,4 +13,4 @@ export PKG_CONFIG_PATH="/home/andyvince01/Desktop/Project/devel/.private/chatbot
 export PWD='/home/andyvince01/Desktop/Project/build/chatbot'
 export PYTHONPATH="/home/andyvince01/Desktop/Project/devel/.private/chatbot/lib/python3/dist-packages:$PYTHONPATH"
 export ROSLISP_PACKAGE_DIRECTORIES="/home/andyvince01/Desktop/Project/devel/.private/chatbot/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
-export ROS_PACKAGE_PATH="/home/andyvince01/Desktop/Project/src/chatabot:$ROS_PACKAGE_PATH"
+export ROS_PACKAGE_PATH="/home/andyvince01/Desktop/Project/src/chatabot:/home/andyvince01/Desktop/Project/src/chatbot:$ROS_PACKAGE_PATH"

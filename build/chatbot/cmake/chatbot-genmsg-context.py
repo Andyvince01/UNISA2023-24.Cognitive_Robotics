@@ -1,7 +1,7 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
 messages_str = ""
-services_str = "/home/andyvince01/Desktop/Project/src/chatabot/srv/Dialogue.srv"
+services_str = "/home/andyvince01/Desktop/Project/src/chatbot/srv/Dialogue.srv"
 pkg_name = "chatbot"
 dependencies_str = "std_msgs"
 langs = "gencpp;geneus;genlisp;gennodejs;genpy"

@@ -43,7 +43,7 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/andyvince01/Desktop/Project/src/chatabot
+CMAKE_SOURCE_DIR = /home/andyvince01/Desktop/Project/src/chatbot
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/andyvince01/Desktop/Project/build/chatbot
@@ -94,6 +94,6 @@ gtest/googlemock/CMakeFiles/gmock.dir/clean:
 .PHONY : gtest/googlemock/CMakeFiles/gmock.dir/clean
 
 gtest/googlemock/CMakeFiles/gmock.dir/depend:
-	cd /home/andyvince01/Desktop/Project/build/chatbot && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/andyvince01/Desktop/Project/src/chatabot /usr/src/googletest/googlemock /home/andyvince01/Desktop/Project/build/chatbot /home/andyvince01/Desktop/Project/build/chatbot/gtest/googlemock /home/andyvince01/Desktop/Project/build/chatbot/gtest/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/andyvince01/Desktop/Project/build/chatbot && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/andyvince01/Desktop/Project/src/chatbot /usr/src/googletest/googlemock /home/andyvince01/Desktop/Project/build/chatbot /home/andyvince01/Desktop/Project/build/chatbot/gtest/googlemock /home/andyvince01/Desktop/Project/build/chatbot/gtest/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : gtest/googlemock/CMakeFiles/gmock.dir/depend
 

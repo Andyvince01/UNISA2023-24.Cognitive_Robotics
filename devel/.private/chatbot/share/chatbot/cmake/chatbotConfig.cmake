@@ -67,7 +67,7 @@ set(chatbot_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(chatbot_SOURCE_PREFIX /home/andyvince01/Desktop/Project/src/chatabot)
+  set(chatbot_SOURCE_PREFIX /home/andyvince01/Desktop/Project/src/chatbot)
   set(chatbot_DEVEL_PREFIX /home/andyvince01/Desktop/Project/devel/.private/chatbot)
   set(chatbot_INSTALL_PREFIX "")
   set(chatbot_PREFIX ${chatbot_DEVEL_PREFIX})
@@ -110,7 +110,7 @@ if(NOT "/home/andyvince01/Desktop/Project/devel/.private/chatbot/include " STREQ
         message(FATAL_ERROR "Project 'chatbot' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'chatbot' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/andyvince01/Desktop/Project/src/chatabot/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'chatbot' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/andyvince01/Desktop/Project/src/chatbot/${idir}'.  ${_report}")
     endif()
     _list_append_unique(chatbot_INCLUDE_DIRS ${include})
   endforeach()

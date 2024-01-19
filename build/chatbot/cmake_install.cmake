@@ -1,4 +1,4 @@
-# Install script for directory: /home/andyvince01/Desktop/Project/src/chatabot
+# Install script for directory: /home/andyvince01/Desktop/Project/src/chatbot
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -129,7 +129,7 @@ file(INSTALL DESTINATION "/home/andyvince01/Desktop/Project/install" TYPE FILE F
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/chatbot/srv" TYPE FILE FILES "/home/andyvince01/Desktop/Project/src/chatabot/srv/Dialogue.srv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/chatbot/srv" TYPE FILE FILES "/home/andyvince01/Desktop/Project/src/chatbot/srv/Dialogue.srv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -176,7 +176,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/chatbot" TYPE FILE FILES "/home/andyvince01/Desktop/Project/src/chatabot/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/chatbot" TYPE FILE FILES "/home/andyvince01/Desktop/Project/src/chatbot/package.xml")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)

@@ -7,6 +7,11 @@ $\textsf{{\color[rgb]{0.0, 0.0, 1.0}A}{\color[rgb]{0.1, 0.0, 0.9}b}{\color[rgb]{
 *Design of the ROS-based architecture behind Pepper's operation as a the robotic guardian of the shopping mall.*
 
 ## 🛠 Testing
+Before testing the code, file permissions must be granted. Once the project has been extracted and the terminal has been opened in the extracted folder, the following commands must be executed:
+```bash
+chmod u+x src/chatbot/scripts/*
+chmod u+x src/features/scripts/*
+```
 This test allows testing the functionality of all implemented modules and, consequently, the overall behavior of Pepper, which is implemented by the `behavioral_manager.py` class. To execute this test, you should launch the **`all.xml`**, as shown below. It is also possible to test the complete behavior without Pepper. In this case, Pepper modules - namely `wakeup_rest_node.py`, `tablet_node.py`, `text2speech_node.py`, and `animation_node.py` - will not be executed as `pepper_on=False`. Specifically, the person and face detectors are executed. If a person is detected by the PC camera, the voice detection service is enabled, and its output is passed to the ASR module. The transcribed text is then passed to the chatbot, which generates a response.
 
 ### Pepper On
@@ -45,3 +50,4 @@ To run the code correctly on Pepper, a high-performance computer is required. Al
 
 ## Demo
 [![Demo](https://github.com/Andyvince01/Unisa2023-24.Cognitive_Robotics/blob/main/Pepper.png?raw=true)](https://drive.google.com/file/d/1cByygt-HeLCd18607BKksqAAawNyKmPt/view?usp=sharing)
+

@@ -114,7 +114,7 @@ class BehaviorManagerNode():
             if not self.__check_face_presence(): 
                 continue
             audio = self.__hadle_voice_detection()
-            if audio.data == (0, 0):
+            if audio is False or audio.data == (0, 0):
                 continue
 
             if not self.__check_face_presence():
@@ -272,8 +272,11 @@ class BehaviorManagerNode():
         Returns:
             The output of the voice detection service, typically audio data.
         '''
-        audio_data = self._services('voice_detection_service')
-        return audio_data.output
+        try:
+            audio_data = self._services('voice_detection_service')
+            return audio_data.output
+        except AttributeError:
+            return False
 
 if __name__ == '__main__':
     parser = OptionParser()

@@ -67,7 +67,7 @@ set(chatbot_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(chatbot_SOURCE_PREFIX /home/andyvince01/Desktop/Project/src/chatabot)
+  set(chatbot_SOURCE_PREFIX /home/andyvince01/Desktop/Project/src/chatbot)
   set(chatbot_DEVEL_PREFIX /home/andyvince01/Desktop/Project/devel/.private/chatbot)
   set(chatbot_INSTALL_PREFIX "")
   set(chatbot_PREFIX ${chatbot_DEVEL_PREFIX})

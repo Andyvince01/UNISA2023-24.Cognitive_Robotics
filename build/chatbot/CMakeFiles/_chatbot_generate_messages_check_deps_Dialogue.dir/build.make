@@ -43,7 +43,7 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/andyvince01/Desktop/Project/src/chatabot
+CMAKE_SOURCE_DIR = /home/andyvince01/Desktop/Project/src/chatbot
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/andyvince01/Desktop/Project/build/chatbot
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/andyvince01/Desktop/Project/build/chatbot
 include CMakeFiles/_chatbot_generate_messages_check_deps_Dialogue.dir/progress.make
 
 CMakeFiles/_chatbot_generate_messages_check_deps_Dialogue:
-	catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py chatbot /home/andyvince01/Desktop/Project/src/chatabot/srv/Dialogue.srv 
+	catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py chatbot /home/andyvince01/Desktop/Project/src/chatbot/srv/Dialogue.srv 
 
 _chatbot_generate_messages_check_deps_Dialogue: CMakeFiles/_chatbot_generate_messages_check_deps_Dialogue
 _chatbot_generate_messages_check_deps_Dialogue: CMakeFiles/_chatbot_generate_messages_check_deps_Dialogue.dir/build.make
@@ -71,6 +71,6 @@ CMakeFiles/_chatbot_generate_messages_check_deps_Dialogue.dir/clean:
 .PHONY : CMakeFiles/_chatbot_generate_messages_check_deps_Dialogue.dir/clean
 
 CMakeFiles/_chatbot_generate_messages_check_deps_Dialogue.dir/depend:
-	cd /home/andyvince01/Desktop/Project/build/chatbot && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/andyvince01/Desktop/Project/src/chatabot /home/andyvince01/Desktop/Project/src/chatabot /home/andyvince01/Desktop/Project/build/chatbot /home/andyvince01/Desktop/Project/build/chatbot /home/andyvince01/Desktop/Project/build/chatbot/CMakeFiles/_chatbot_generate_messages_check_deps_Dialogue.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/andyvince01/Desktop/Project/build/chatbot && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/andyvince01/Desktop/Project/src/chatbot /home/andyvince01/Desktop/Project/src/chatbot /home/andyvince01/Desktop/Project/build/chatbot /home/andyvince01/Desktop/Project/build/chatbot /home/andyvince01/Desktop/Project/build/chatbot/CMakeFiles/_chatbot_generate_messages_check_deps_Dialogue.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/_chatbot_generate_messages_check_deps_Dialogue.dir/depend
 
